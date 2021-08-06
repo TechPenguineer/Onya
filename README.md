@@ -45,4 +45,8 @@ DoSomething("John");
  `>` `Hello, John`
  
  # Contributers
- ![GitHub Contributors Image](https://contrib.rocks/image?repo=TechPenguineer/onya)
+ 
+ 
+<a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
+</a>
