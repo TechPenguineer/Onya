@@ -45,4 +45,4 @@ DoSomething("John");
  `>` `Hello, John`
  
  # Contributers
- ![GitHub Contributors Image](https://contrib.rocks/image?repo=TechPenguineer/Hypermc)
+ ![GitHub Contributors Image](https://contrib.rocks/image?repo=TechPenguineer/onya)
