@@ -6,7 +6,7 @@
 #include <stdio.h>
 lexer_T* init_lexer(char* contents)
 {
-	printf("CREATED INIT LEXER\n");
+	//printf("CREATED INIT LEXER\n");
 	lexer_T* lexer = calloc(1, sizeof(struct LEXER_STRUCT));
 	lexer->contents = contents;
 	lexer->i = 0;
@@ -17,7 +17,7 @@ lexer_T* init_lexer(char* contents)
 
 void lexer_advance(lexer_T* lexer)
 {
-	printf("CREATED LEXER ADVANCER\n");
+	//printf("CREATED LEXER ADVANCER\n");
 
 	if (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
 	{
@@ -27,7 +27,7 @@ void lexer_advance(lexer_T* lexer)
 }
 void lexer_skip_whitespace(lexer_T* lexer)
 {
-	printf("CREATED SKIP WHITESPACES\n");
+	//printf("CREATED SKIP WHITESPACES\n");
 
 	while (lexer->c == ' ' || lexer->c == 10)
 	{
@@ -39,19 +39,19 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 {
 	while (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
 	{
-		printf("NEW TOKEN\n");
+		//printf("NEW TOKEN\n");
 		
 		if (lexer->c == ' ' || lexer->c == 10)
 		{
 			lexer_skip_whitespace(lexer);
-			printf("SKIPPED WHITESPACE\n");
+			//printf("SKIPPED WHITESPACE\n");
 
 		}
 
 		if (isalnum(lexer->c))
 		{
 			return lexer_collect_id(lexer);
-			printf("COLLECTED ID\n");
+			//printf("COLLECTED ID\n");
 
 		}
 
@@ -59,7 +59,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 		if (lexer->c == '"')
 		{
 			return lexer_collect_string(lexer);
-			printf("COLLECTED STRING\n");
+			//printf("COLLECTED STRING\n");
 
 		}
 		switch (lexer->c)
@@ -84,7 +84,7 @@ token_T* lexer_collect_string(lexer_T* lexer)
 
 	while (lexer->c != '"')
 	{
-		printf("CREATED STRING COLLECTOR\n");
+		//printf("CREATED STRING COLLECTOR\n");
 		//                 CHECK IN DEBUG V
 		char* s = lexer_get_current_char_as_string(lexer);
 		value = realloc(value, (strlen(value) + strlen(s) + 1) * sizeof(char));
@@ -104,7 +104,7 @@ token_T* lexer_collect_id(lexer_T* lexer)
 
 	while (isalnum( lexer->c ))
 	{
-		printf("COLLECTED ID\n");
+		//printf("COLLECTED ID\n");
 
 		char* s = lexer_get_current_char_as_string(lexer);
 		value = realloc(value, (strlen(value) + strlen(s) + 1) * sizeof(char));
@@ -119,14 +119,14 @@ token_T* lexer_collect_id(lexer_T* lexer)
 token_T* lexer_advance_with_token(lexer_T* lexer, token_T* token)
 {
 	lexer_advance(lexer);
-	printf("ADVANNCED TOKEN\n");
+	//printf("ADVANNCED TOKEN\n");
 
 	return token;
 }
 
 char* lexer_get_current_char_as_string(lexer_T* lexer)
 {
-	printf("GOT CURRENT CHAR AS A STRNG\n");
+	//printf("GOT CURRENT CHAR AS A STRNG\n");
 
 	char* str = calloc(2, sizeof(char));
 	str[0] = lexer->c;
