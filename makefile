@@ -1,4 +1,4 @@
-exec=onya.out
+exec=onya.exe
 sources=$(wildcard src/*.c)
 objects=$(sources:.c=.o)
 
@@ -10,6 +10,9 @@ $(exec): $(objects)
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
 
+install:
+	make
+	cp ./$(exec) $(wildcard appdata)
 clean:
 	-rm *.out 
 	-rm *.o
