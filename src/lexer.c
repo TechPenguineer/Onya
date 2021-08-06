@@ -41,6 +41,8 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 			{
 			case '=': return lexer_advance_with_token(lexer, init_token(TOKEN_EQUALS, lexer_get_current_chat_as_string(lexer))); break;
 			case ';': return lexer_advance_with_token(lexer, init_token(TOKEN_SEMI, lexer_get_current_chat_as_string(lexer))); break;
+			case '(': return lexer_advance_with_token(lexer, init_token(TOKEN_LPAREN, lexer_get_current_chat_as_string(lexer))); break;
+			case ')': return lexer_advance_with_token(lexer, init_token(TOKEN_RPAREN, lexer_get_current_chat_as_string(lexer))); break;
 
 			}
 		}
