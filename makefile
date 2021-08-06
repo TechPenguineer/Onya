@@ -9,3 +9,8 @@ $(exec): $(objects)
 
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
+
+clean:
+	-rm *.out 
+	-rm *.o
+	-rm src*.o
