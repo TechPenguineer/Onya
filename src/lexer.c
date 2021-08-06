@@ -55,8 +55,12 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 
 token_T* lexer_collect_string(lexer_T* lexer)
 {
+	lexer_advance(lexer);
 
-}
+	while (lexer->c != '"')
+	{
+
+	}
 
 token_T* lexer_advance_with_token(lexer_T* lexer, token_T* token)
 {
