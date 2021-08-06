@@ -13,7 +13,7 @@ typedef struct TOKEN_STRUCT
 	} type;
 
 	char* value
-} TOKEN_H;
+} token_T;
 
 token_T* init_token(int type, char* value);
 #endif // !TOKEN_H
