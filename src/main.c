@@ -37,7 +37,8 @@ char** split(const char* text, const char* deli, int* len)
 
 unsigned int contains(char** parts, const char* needle, int len)
 {
-  for (int i = 0; i < len; i++)
+    int i;
+  for (i = 0; i < len; i++)
     if (strcmp(parts[i], needle) == 0)
       return 1;
 
@@ -51,7 +52,8 @@ unsigned int has_ext(const char* filename, const char* ext)
   unsigned int c = contains(parts, ext, len);
 
   if (parts) {
-    for (int i = 0; i < len; i++)
+      int i;
+    for ( i = 0; i < len; i++)
       free(parts[i]);
 
     free(parts);
@@ -62,39 +64,6 @@ unsigned int has_ext(const char* filename, const char* ext)
 
 int main(int argc, char* argv[])
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    if (argc >= 2){
-        int i;
-        for( i = 1; i < argc; i++){
-            int len = strlen(argv[i]);
-            char* last_four = &argv[i][len-6];
-            if(strcmp(last_four,".onya") == 0){
-                                lexer_T* lexer = init_lexer(
-                    get_file_contents(argv[i])
-                );
-                parser_T* parser = init_parser(lexer);
-                AST_T* root = parser_parse(parser, parser->scope);
-                visitor_T* visitor = init_visitor();
-                visitor_visit(visitor, root);
-            }
-
-            else {
-                print_help();
-            }
-        }
-=======
-=======
->>>>>>> parent of 7644d56 (.)
-=======
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
->>>>>>> parent of edd9782 (.)
-=======
->>>>>>> parent of 651b737 (remove workflows)
   if (argc >= 2) {
     int i;
     for (i = 1; i < argc; i++) {
@@ -109,42 +78,7 @@ int main(int argc, char* argv[])
       else {
         print_help();
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 0b46eb2 (fix conflicts)
-=======
->>>>>>> parent of 7644d56 (.)
-=======
 
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
-=======
-    if (argc >= 2){
-        int i;
-        for( i = 1; i < argc; i++){
-            int len = strlen(argv[i]);
-            char* last_four = &argv[i][len-5];
-            if(strcmp(last_four,".onya") == 0){
-                                lexer_T* lexer = init_lexer(
-                    get_file_contents(argv[i])
-                );
-                parser_T* parser = init_parser(lexer);
-                AST_T* root = parser_parse(parser, parser->scope);
-                visitor_T* visitor = init_visitor();
-                visitor_visit(visitor, root);
-                
-            }
-
-            else {
-                print_help();
-            }
-        }
->>>>>>> main
->>>>>>> parent of edd9782 (.)
-=======
->>>>>>> parent of 651b737 (remove workflows)
     }
   } else {
     char input[MAX_LIMIT];
@@ -157,36 +91,6 @@ int main(int argc, char* argv[])
       visitor_T* visitor = init_visitor();
       visitor_visit(visitor, root);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return 0;
-}
-=======
   }
   return 0;
 }
->>>>>>> parent of 7644d56 (.)
-=======
-  }
-  return 0;
-}
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
-  }
-  return 0;
-}
-=======
-    
-    
-    
-    0;
-}
->>>>>>> main
->>>>>>> parent of edd9782 (.)
-=======
-  }
-  return 0;
-}
->>>>>>> parent of 651b737 (remove workflows)

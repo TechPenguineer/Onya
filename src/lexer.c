@@ -11,51 +11,7 @@ lexer_T* init_lexer(char* contents)
   lexer->i = 0;
   lexer->c = contents[lexer->i];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of edd9782 (.)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
   return lexer;
-=======
-    
-    
-    
-    lexer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    return lexer;
->>>>>>> parent of e7b217b (make your code work)
-<<<<<<< HEAD
-=======
-    return lexer;
->>>>>>> parent of e7b217b (make your code work)
-=======
-    return lexer;
->>>>>>> parent of be1b0de (changed unix build name)
-=======
-  return lexer;
->>>>>>> parent of 7644d56 (.)
-=======
-  return lexer;
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
->>>>>>> main
->>>>>>> parent of edd9782 (.)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
 }
 
 void lexer_advance(lexer_T* lexer)
@@ -75,21 +31,6 @@ void lexer_skip_whitespace(lexer_T* lexer)
 
 token_T* lexer_get_next_token(lexer_T* lexer)
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 7644d56 (.)
-=======
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
   while (lexer->c != '\0' && lexer->i < strlen(lexer->contents)) {
     if (lexer->c == ' ' || lexer->c == 10)
       lexer_skip_whitespace(lexer);
@@ -129,89 +70,6 @@ token_T* lexer_get_next_token(lexer_T* lexer)
         return lexer_advance_with_token(
           lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer)));
         break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> parent of e7b217b (make your code work)
-<<<<<<< HEAD
-=======
->>>>>>> parent of e7b217b (make your code work)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
-    while (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
-    {
-        if (lexer->c == ' ' || lexer->c == 10)
-            lexer_skip_whitespace(lexer);
-
-        if (isalnum(lexer->c))
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
-            
-            
-            
-            
-            lexer_collect_id(lexer);
-<<<<<<< HEAD
-=======
-            return lexer_collect_id(lexer);
->>>>>>> parent of e7b217b (make your code work)
-<<<<<<< HEAD
-=======
-            return lexer_collect_id(lexer);
->>>>>>> parent of e7b217b (make your code work)
-=======
-            return lexer_collect_id(lexer);
->>>>>>> parent of be1b0de (changed unix build name)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
-
-        if (lexer->c == '"')
-            return lexer_collect_string(lexer);
-
-        switch (lexer->c)
-        {
-            case '=': return lexer_advance_with_token(lexer, init_token(TOKEN_EQUALS, lexer_get_current_char_as_string(lexer))); break;
-            case ';': return lexer_advance_with_token(lexer, init_token(TOKEN_SEMI, lexer_get_current_char_as_string(lexer))); break;
-            case '(': return lexer_advance_with_token(lexer, init_token(TOKEN_LPAREN, lexer_get_current_char_as_string(lexer))); break;
-            case ')': return lexer_advance_with_token(lexer, init_token(TOKEN_RPAREN, lexer_get_current_char_as_string(lexer))); break;
-            case '{': return lexer_advance_with_token(lexer, init_token(TOKEN_LBRACE, lexer_get_current_char_as_string(lexer))); break;
-            case '}': return lexer_advance_with_token(lexer, init_token(TOKEN_RBRACE, lexer_get_current_char_as_string(lexer))); break;
-            case ',': return lexer_advance_with_token(lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer))); break;
-        }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> parent of e7b217b (make your code work)
-=======
->>>>>>> parent of e7b217b (make your code work)
-=======
->>>>>>> parent of 7644d56 (.)
-=======
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
->>>>>>> main
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> main
-=======
->>>>>>> parent of e7b217b (make your code work)
->>>>>>> parent of 8c07ddc (revert to initial pull)
     }
   }
 

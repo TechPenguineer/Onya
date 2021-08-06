@@ -27,118 +27,17 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
 
   scope->function_definitions[scope->function_definitions_size - 1] = fdef;
 
-<<<<<<< HEAD
   return fdef;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of edd9782 (.)
-    
-    
-    
-    
-    fdef;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> parent of 98c92a1 (revert to initial pull)
-    return fdef;
->>>>>>> parent of e7b217b (make your code work)
-<<<<<<< HEAD
-=======
-    return fdef;
-<<<<<<< HEAD
-=======
-    return fdef;
-=======
->>>>>>> parent of 7644d56 (.)
-=======
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
->>>>>>> main
->>>>>>> parent of edd9782 (.)
-=======
->>>>>>> parent of 651b737 (remove workflows)
 }
->>>>>>> parent of be1b0de (changed unix build name)
-=======
->>>>>>> parent of e7b217b (make your code work)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
-}
->>>>>>> parent of 98c92a1 (revert to initial pull)
 
 AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 {
-<<<<<<< HEAD
   int i;
   for (i = 0; i < scope->function_definitions_size; i++) {
     AST_T* fdef = scope->function_definitions[i];
 
     if (strcmp(fdef->function_definition_name, fname) == 0) {
       return fdef;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of edd9782 (.)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
-=======
->>>>>>> parent of e7b217b (make your code work)
-<<<<<<< HEAD
-=======
->>>>>>> parent of e7b217b (make your code work)
->>>>>>> parent of 98c92a1 (revert to initial pull)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
-    int i;
-    for ( i = 0; i < scope->function_definitions_size; i++)
-    {
-        AST_T* fdef = scope->function_definitions[i];
-
-        if (strcmp(fdef->function_definition_name, fname) == 0)
-        {
-<<<<<<< HEAD
-            
-            
-            
-            
-            
-            fdef;
-<<<<<<< HEAD
-=======
-            return fdef;
->>>>>>> parent of e7b217b (make your code work)
-<<<<<<< HEAD
-=======
-            return fdef;
->>>>>>> parent of e7b217b (make your code work)
-=======
-            return fdef;
->>>>>>> parent of be1b0de (changed unix build name)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
-        }
-<<<<<<< HEAD
-=======
->>>>>>> parent of 7644d56 (.)
-=======
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
->>>>>>> main
->>>>>>> parent of edd9782 (.)
     }
   }
 

@@ -19,62 +19,9 @@ char* get_file_contents(const char* filepath)
     if (buffer)
       fread(buffer, 1, length, f);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of edd9782 (.)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
     fclose(f);
     return buffer;
   }
-=======
-        fclose(f);
-<<<<<<< HEAD
-        
-        
-        
-        
-        buffer;
-<<<<<<< HEAD
-=======
-        fclose(f);
-        return buffer;
->>>>>>> parent of e7b217b (make your code work)
-<<<<<<< HEAD
-=======
-        fclose(f);
-        return buffer;
->>>>>>> parent of e7b217b (make your code work)
-=======
-        return buffer;
->>>>>>> parent of be1b0de (changed unix build name)
-=======
->>>>>>> parent of 651b737 (remove workflows)
-=======
->>>>>>> parent of 8c07ddc (revert to initial pull)
-    }
-<<<<<<< HEAD
-=======
-    fclose(f);
-    return buffer;
-  }
->>>>>>> parent of 7644d56 (.)
-=======
-    fclose(f);
-    return buffer;
-  }
->>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
-=======
->>>>>>> main
->>>>>>> parent of edd9782 (.)
 
   printf("Error reading file %s\n", filepath);
   exit(2);

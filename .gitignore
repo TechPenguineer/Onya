@@ -2,9 +2,6 @@
 # Created by https://www.gitignore.io/api/vim,c
 # Edit at https://www.gitignore.io/?templates=vim,c
 
-# VS
-.vs/
-
 ### C ###
 # Prerequisites
 *.d
