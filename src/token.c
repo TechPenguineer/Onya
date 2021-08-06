@@ -9,8 +9,12 @@ token_T* init_token(int type, char* value)
     token->value = value;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     token;
+=======
+    return token;
+>>>>>>> parent of e7b217b (make your code work)
 =======
     return token;
 >>>>>>> parent of e7b217b (make your code work)

@@ -22,6 +22,7 @@ char* get_file_contents(const char* filepath)
             fread(buffer, 1, length, f);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     fclose(f);
     return buffer;
   }
@@ -31,6 +32,10 @@ char* get_file_contents(const char* filepath)
         
         
         buffer;
+=======
+        fclose(f);
+        return buffer;
+>>>>>>> parent of e7b217b (make your code work)
 =======
         fclose(f);
         return buffer;

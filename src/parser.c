@@ -38,6 +38,7 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return parser_parse_statements(parser, scope);
 =======
     
@@ -48,10 +49,14 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 =======
     return parser_parse_statements(parser, scope);
 >>>>>>> parent of e7b217b (make your code work)
+=======
+    return parser_parse_statements(parser, scope);
+>>>>>>> parent of e7b217b (make your code work)
 }
 
 AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   switch (parser->current_token->type) {
@@ -69,10 +74,15 @@ AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
     }
 >>>>>>> main
 =======
+=======
+>>>>>>> parent of e7b217b (make your code work)
     switch (parser->current_token->type)
     {
         case TOKEN_ID: return parser_parse_id(parser, scope);
     }
+<<<<<<< HEAD
+>>>>>>> parent of e7b217b (make your code work)
+=======
 >>>>>>> parent of e7b217b (make your code work)
 
     return init_ast(AST_NOOP);
@@ -214,6 +224,7 @@ AST_T* parser_parse_function_definition(parser_T* parser, scope_T* scope)
         AST_T* arg = parser_parse_variable(parser, scope);
         ast->function_definition_args[ast->function_definition_args_size-1] = arg;
     }
+<<<<<<< HEAD
 
     parser_eat(parser, TOKEN_RPAREN);
     
@@ -225,6 +236,19 @@ AST_T* parser_parse_function_definition(parser_T* parser, scope_T* scope)
 
     ast->scope = scope;
 
+=======
+
+    parser_eat(parser, TOKEN_RPAREN);
+    
+    parser_eat(parser, TOKEN_LBRACE);
+    
+    ast->function_definition_body = parser_parse_statements(parser, scope);
+
+    parser_eat(parser, TOKEN_RBRACE);
+
+    ast->scope = scope;
+
+>>>>>>> parent of e7b217b (make your code work)
     return ast;
 }
 

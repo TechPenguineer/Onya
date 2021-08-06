@@ -36,6 +36,7 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
         fdef;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return fdef;
     
     
@@ -45,10 +46,14 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
 =======
     return fdef;
 >>>>>>> parent of e7b217b (make your code work)
+=======
+    return fdef;
+>>>>>>> parent of e7b217b (make your code work)
 }
 
 AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
   int i;
   for (i = 0; i < scope->function_definitions_size; i++) {
@@ -56,6 +61,8 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 
     if (strcmp(fdef->function_definition_name, fname) == 0) {
       return fdef;
+=======
+>>>>>>> parent of e7b217b (make your code work)
 =======
 >>>>>>> parent of e7b217b (make your code work)
     int i;
@@ -66,12 +73,16 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
         if (strcmp(fdef->function_definition_name, fname) == 0)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             
             
             
             
             fdef;
+=======
+            return fdef;
+>>>>>>> parent of e7b217b (make your code work)
 =======
             return fdef;
 >>>>>>> parent of e7b217b (make your code work)

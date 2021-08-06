@@ -13,11 +13,15 @@ lexer_T* init_lexer(char* contents)
     lexer->c = contents[lexer->i];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return lexer;
     
     
     
     lexer;
+=======
+    return lexer;
+>>>>>>> parent of e7b217b (make your code work)
 =======
     return lexer;
 >>>>>>> parent of e7b217b (make your code work)
@@ -42,6 +46,7 @@ void lexer_skip_whitespace(lexer_T* lexer)
 
 token_T* lexer_get_next_token(lexer_T* lexer)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   while (lexer->c != '\0' && lexer->i < strlen(lexer->contents)) {
@@ -86,6 +91,8 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 =======
 =======
 >>>>>>> parent of e7b217b (make your code work)
+=======
+>>>>>>> parent of e7b217b (make your code work)
     while (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
     {
         if (lexer->c == ' ' || lexer->c == 10)
@@ -93,11 +100,15 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 
         if (isalnum(lexer->c))
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             
             
             
             lexer_collect_id(lexer);
+=======
+            return lexer_collect_id(lexer);
+>>>>>>> parent of e7b217b (make your code work)
 =======
             return lexer_collect_id(lexer);
 >>>>>>> parent of e7b217b (make your code work)
@@ -116,7 +127,10 @@ token_T* lexer_get_next_token(lexer_T* lexer)
             case ',': return lexer_advance_with_token(lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer))); break;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> parent of e7b217b (make your code work)
 =======
 >>>>>>> parent of e7b217b (make your code work)
     }

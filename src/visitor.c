@@ -119,11 +119,15 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
     if (strcmp(node->function_call_name, "print") == 0)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return builtin_function_print(visitor, node->function_c
             
             
             
             ll_arguments, node->function_call_arguments_size);
+=======
+        return builtin_function_print(visitor, node->function_call_arguments, node->function_call_arguments_size);
+>>>>>>> parent of e7b217b (make your code work)
 =======
         return builtin_function_print(visitor, node->function_call_arguments, node->function_call_arguments_size);
 >>>>>>> parent of e7b217b (make your code work)
