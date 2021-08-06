@@ -38,6 +38,10 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 		{
 			lexer_skip_whitespace(lexer);
 
+			if (isalnum(lexer->c))
+			{
+				return lexer_collect_id(lexer);
+			}
 			if (lexer->c == '"')
 			{
 				return lexer_collect_string(lexer);
