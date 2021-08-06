@@ -238,6 +238,7 @@ AST_T* parser_parse_id(parser_T* parser, scope_T* scope)
     {
         return parser_parse_function_definition(parser, scope);
     }
+
     else
     {
         return parser_parse_variable(parser, scope);
