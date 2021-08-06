@@ -41,6 +41,7 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return parser_parse_statements(parser, scope);
 =======
     
@@ -60,10 +61,14 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 =======
   return parser_parse_statements(parser, scope);
 >>>>>>> parent of 7644d56 (.)
+=======
+  return parser_parse_statements(parser, scope);
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
 }
 
 AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
 {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +98,11 @@ AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
     case TOKEN_ID: return parser_parse_id(parser, scope);
   }
 >>>>>>> parent of 7644d56 (.)
+=======
+  switch (parser->current_token->type) {
+    case TOKEN_ID: return parser_parse_id(parser, scope);
+  }
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
 
     return init_ast(AST_NOOP);
 }

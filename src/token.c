@@ -12,6 +12,7 @@ token_T* init_token(int type, char* value)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     token;
 =======
@@ -26,4 +27,7 @@ token_T* init_token(int type, char* value)
 =======
   return token;
 >>>>>>> parent of 7644d56 (.)
+=======
+  return token;
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
 }

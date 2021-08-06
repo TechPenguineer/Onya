@@ -117,6 +117,7 @@ AST_T* visitor_visit_variable(visitor_T* visitor, AST_T* node)
 AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (strcmp(node->function_call_name, "print") == 0)
     {
 <<<<<<< HEAD
@@ -183,6 +184,8 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
     
     return visitor_visit(visitor, fdef->function_definition_body);
 =======
+=======
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
   if (strcmp(node->function_call_name, "print") == 0) {
     return builtin_function_print(
       visitor, node->function_call_arguments, node->function_call_arguments_size);
@@ -234,7 +237,10 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
   }
 
   return visitor_visit(visitor, fdef->function_definition_body);
+<<<<<<< HEAD
 >>>>>>> parent of 7644d56 (.)
+=======
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
 }
 
 AST_T* visitor_visit_string(visitor_T* visitor, AST_T* node)

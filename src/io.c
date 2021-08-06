@@ -24,6 +24,7 @@ char* get_file_contents(const char* filepath)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fclose(f);
     return buffer;
   }
@@ -51,6 +52,11 @@ char* get_file_contents(const char* filepath)
     return buffer;
   }
 >>>>>>> parent of 7644d56 (.)
+=======
+    fclose(f);
+    return buffer;
+  }
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
 
     printf("Error reading file %s\n", filepath);
     exit(2);

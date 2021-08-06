@@ -17,6 +17,7 @@ int main(int argc, char* argv[])
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (argc >= 2){
         int i;
         for( i = 1; i < argc; i++){
@@ -39,6 +40,8 @@ int main(int argc, char* argv[])
 =======
 =======
 >>>>>>> parent of 7644d56 (.)
+=======
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
   if (argc >= 2) {
     int i;
     for (i = 1; i < argc; i++) {
@@ -54,9 +57,13 @@ int main(int argc, char* argv[])
         print_help();
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 0b46eb2 (fix conflicts)
 =======
 >>>>>>> parent of 7644d56 (.)
+=======
+
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
     }
     else {
         char input[MAX_LIMIT];
@@ -71,6 +78,7 @@ int main(int argc, char* argv[])
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     return 0;
 }
 =======
@@ -78,3 +86,8 @@ int main(int argc, char* argv[])
   return 0;
 }
 >>>>>>> parent of 7644d56 (.)
+=======
+  }
+  return 0;
+}
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)

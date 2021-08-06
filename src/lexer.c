@@ -16,6 +16,7 @@ lexer_T* init_lexer(char* contents)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return lexer;
     
     
@@ -33,6 +34,9 @@ lexer_T* init_lexer(char* contents)
 =======
   return lexer;
 >>>>>>> parent of 7644d56 (.)
+=======
+  return lexer;
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
 }
 
 void lexer_advance(lexer_T* lexer)
@@ -58,8 +62,11 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 7644d56 (.)
+=======
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
   while (lexer->c != '\0' && lexer->i < strlen(lexer->contents)) {
     if (lexer->c == ' ' || lexer->c == 10)
       lexer_skip_whitespace(lexer);
@@ -99,6 +106,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
         return lexer_advance_with_token(
           lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer)));
         break;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -151,6 +159,8 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 >>>>>>> parent of e7b217b (make your code work)
 =======
 >>>>>>> parent of 7644d56 (.)
+=======
+>>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
     }
 
     return init_token(TOKEN_EOF, "\0");
