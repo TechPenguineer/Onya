@@ -1,5 +1,6 @@
 ![BANNER](docs/banner.png)
-# Onya
+<hr>
+
  An open source general purpose programming language!
 
 # How to run
