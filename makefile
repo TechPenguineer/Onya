@@ -17,4 +17,4 @@ install:
 clean:
 	-rm *.exe
 	-rm *.o
-	-rm src*.o
+	-rm src/*.o

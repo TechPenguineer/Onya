@@ -3,8 +3,8 @@
 int main(int argc, char* argv[])
 {
 	lexer_T* lexer = init_lexer(
-		"var name = \"BOB\";"
-		"print(name);"
+		"var name = \"BOB\";\n"
+		"print(name);\n"
 	);
 
 	token_T* token = (void*)0;
