@@ -35,6 +35,12 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 		if (lexer->c == ' ' || lexer->c == 10)
 		{
 			lexer_skip_whitespace(lexer);
+
+			switch (lexer->c)
+			{
+			case '=': return lexer_advance_with_token(); break;
+
+			}
 		}
 	}
 }
@@ -42,6 +48,12 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 token_T* lexer_collect_string(lexer_T* lexer)
 {
 
+}
+
+token_T* lexer_advance_with_token(lexer_T* lexer, token_T* token)
+{
+	lexer_advance(lexer);
+	return token;
 }
 
 char* lexer_get_current_chat_as_string(lexer_T* lexer)
