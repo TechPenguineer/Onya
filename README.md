@@ -1,6 +1,9 @@
 # Onya
  An open source general purpose programming language!
 
+# How to run
+After installing all you have to do is type `onya help` you will get a prompt giving you instructions
+
  # Examples
 
  ## Printing
