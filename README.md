@@ -46,6 +46,7 @@ DoSomething("John");
  `>` `Hello, John`
  
  # Contributers
+<<<<<<< HEAD
  
  
 <a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
@@ -54,3 +55,6 @@ DoSomething("John");
 =======
  `>` `Hello, John`
 >>>>>>> parent of 11f5faa (Merge branch 'main' of https://github.com/TechPenguineer/Onya into main)
+=======
+ ![GitHub Contributors Image](https://contrib.rocks/image?repo=TechPenguineer/Hypermc)
+>>>>>>> parent of cf0d0ab (Update README.md)
