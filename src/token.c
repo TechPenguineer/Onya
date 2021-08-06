@@ -14,11 +14,15 @@ token_T* init_token(int type, char* value)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
     
     token;
 =======
     return token;
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
     return token;
 >>>>>>> parent of e7b217b (make your code work)
@@ -42,4 +46,6 @@ token_T* init_token(int type, char* value)
     
     token;
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
 }

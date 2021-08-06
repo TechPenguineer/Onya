@@ -37,8 +37,11 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
   return parser_parse_statements(parser, scope);
 =======
     
@@ -50,6 +53,7 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 =======
     return parser_parse_statements(parser, scope);
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
     return parser_parse_statements(parser, scope);
 >>>>>>> parent of e7b217b (make your code work)
@@ -64,6 +68,8 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 >>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
 }
 
 AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
@@ -74,8 +80,11 @@ AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
   switch (parser->current_token->type) {
     case TOKEN_ID: return parser_parse_id(parser, scope);
   }
@@ -87,15 +96,10 @@ AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
 >>>>>>> main
 <<<<<<< HEAD
 =======
-=======
->>>>>>> parent of e7b217b (make your code work)
     switch (parser->current_token->type)
     {
         case TOKEN_ID: return parser_parse_id(parser, scope);
     }
-<<<<<<< HEAD
->>>>>>> parent of e7b217b (make your code work)
-=======
 >>>>>>> parent of e7b217b (make your code work)
 =======
   switch (parser->current_token->type) {
@@ -238,6 +242,7 @@ AST_T* parser_parse_function_definition(parser_T* parser, scope_T* scope)
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     parser_eat(parser, TOKEN_RPAREN);
     
@@ -253,6 +258,8 @@ AST_T* parser_parse_function_definition(parser_T* parser, scope_T* scope)
 =======
   }
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
 
   parser_eat(parser, TOKEN_RPAREN);
 
@@ -262,10 +269,13 @@ AST_T* parser_parse_function_definition(parser_T* parser, scope_T* scope)
 
   parser_eat(parser, TOKEN_RBRACE);
 
+<<<<<<< HEAD
   ast->scope = scope;
 
 <<<<<<< HEAD
 >>>>>>> parent of e7b217b (make your code work)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
     return ast;
 =======
   return ast;

@@ -166,8 +166,11 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
         return builtin_function_print(visitor, node->function_c
             
             
@@ -177,6 +180,7 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
 =======
         return builtin_function_print(visitor, node->function_call_arguments, node->function_call_arguments_size);
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
         return builtin_function_print(visitor, node->function_call_arguments, node->function_call_arguments_size);
 >>>>>>> parent of e7b217b (make your code work)
@@ -185,6 +189,8 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
 >>>>>>> parent of be1b0de (changed unix build name)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
     }
 
     if (strcmp(node->function_call_name, "exit"||"quit") == 0)

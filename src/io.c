@@ -25,10 +25,13 @@ char* get_file_contents(const char* filepath)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of edd9782 (.)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
     fclose(f);
     return buffer;
   }
@@ -45,6 +48,7 @@ char* get_file_contents(const char* filepath)
         fclose(f);
         return buffer;
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
         fclose(f);
         return buffer;
@@ -54,6 +58,8 @@ char* get_file_contents(const char* filepath)
 >>>>>>> parent of be1b0de (changed unix build name)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
     }
 <<<<<<< HEAD
 =======

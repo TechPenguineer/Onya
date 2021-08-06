@@ -18,10 +18,13 @@ lexer_T* init_lexer(char* contents)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of edd9782 (.)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
   return lexer;
 =======
     
@@ -33,6 +36,7 @@ lexer_T* init_lexer(char* contents)
 =======
     return lexer;
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
     return lexer;
 >>>>>>> parent of e7b217b (make your code work)
@@ -50,6 +54,8 @@ lexer_T* init_lexer(char* contents)
 >>>>>>> parent of edd9782 (.)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
 }
 
 void lexer_advance(lexer_T* lexer)
@@ -75,12 +81,15 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 7644d56 (.)
 =======
 >>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
   while (lexer->c != '\0' && lexer->i < strlen(lexer->contents)) {
     if (lexer->c == ' ' || lexer->c == 10)
       lexer_skip_whitespace(lexer);
@@ -126,10 +135,13 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 =======
 <<<<<<< HEAD
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
 >>>>>>> parent of e7b217b (make your code work)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
     while (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
     {
         if (lexer->c == ' ' || lexer->c == 10)
@@ -140,8 +152,11 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
             
             
             
@@ -151,6 +166,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 =======
             return lexer_collect_id(lexer);
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
             return lexer_collect_id(lexer);
 >>>>>>> parent of e7b217b (make your code work)
@@ -159,6 +175,8 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 >>>>>>> parent of be1b0de (changed unix build name)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
 
         if (lexer->c == '"')
             return lexer_collect_string(lexer);
@@ -176,6 +194,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 =======
 >>>>>>> parent of e7b217b (make your code work)
@@ -188,6 +207,11 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 =======
 >>>>>>> main
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> main
+=======
+>>>>>>> parent of e7b217b (make your code work)
+>>>>>>> parent of 8c07ddc (revert to initial pull)
     }
   }
 

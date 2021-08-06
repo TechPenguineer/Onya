@@ -28,7 +28,6 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
   scope->function_definitions[scope->function_definitions_size - 1] = fdef;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
   return fdef;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,6 +49,7 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
 >>>>>>> parent of 98c92a1 (revert to initial pull)
     return fdef;
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
     return fdef;
 <<<<<<< HEAD
@@ -68,12 +68,13 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
 >>>>>>> parent of be1b0de (changed unix build name)
 =======
 >>>>>>> parent of e7b217b (make your code work)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
 }
 >>>>>>> parent of 98c92a1 (revert to initial pull)
 
 AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 {
-<<<<<<< HEAD
 <<<<<<< HEAD
   int i;
   for (i = 0; i < scope->function_definitions_size; i++) {
@@ -94,9 +95,12 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 =======
 =======
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
 >>>>>>> parent of e7b217b (make your code work)
 >>>>>>> parent of 98c92a1 (revert to initial pull)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
     int i;
     for ( i = 0; i < scope->function_definitions_size; i++)
     {
@@ -104,7 +108,6 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 
         if (strcmp(fdef->function_definition_name, fname) == 0)
         {
-<<<<<<< HEAD
 <<<<<<< HEAD
             
             
@@ -116,6 +119,7 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 =======
             return fdef;
 >>>>>>> parent of e7b217b (make your code work)
+<<<<<<< HEAD
 =======
             return fdef;
 >>>>>>> parent of e7b217b (make your code work)
@@ -124,6 +128,8 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 >>>>>>> parent of be1b0de (changed unix build name)
 =======
 >>>>>>> parent of 651b737 (remove workflows)
+=======
+>>>>>>> parent of 8c07ddc (revert to initial pull)
         }
 <<<<<<< HEAD
 =======
