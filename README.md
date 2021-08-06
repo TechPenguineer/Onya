@@ -26,3 +26,15 @@ DoSomething();
 ```
  **Output:**<br>
  `>` `Hello World!`
+
+ ## Functions Arguments
+```javascript
+function DoSomething(name)
+{
+    print("Hello, ", name);
+};
+
+DoSomething("John");
+```
+ **Output:**<br>
+ `>` `Hello, John`
