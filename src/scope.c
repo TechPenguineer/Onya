@@ -35,14 +35,20 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
     scope->function_definitions[scope->function_definitions_size-1] =
         fdef;
 
+<<<<<<< HEAD
   return fdef;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of edd9782 (.)
     
     
     
     
     fdef;
+<<<<<<< HEAD
 
     return fdef;
 
@@ -53,11 +59,15 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
 >>>>>>> parent of 7644d56 (.)
 =======
 >>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
+=======
+>>>>>>> main
+>>>>>>> parent of edd9782 (.)
 }
 >>>>>>> parent of be1b0de (changed unix build name)
 
 AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 {
+<<<<<<< HEAD
   int i;
   for (i = 0; i < scope->function_definitions_size; i++) {
     AST_T* fdef = scope->function_definitions[i];
@@ -66,6 +76,10 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
       return fdef;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of edd9782 (.)
     int i;
     for ( i = 0; i < scope->function_definitions_size; i++)
     {
@@ -89,10 +103,14 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
             return fdef;
 >>>>>>> parent of be1b0de (changed unix build name)
         }
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 7644d56 (.)
 =======
 >>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
+=======
+>>>>>>> main
+>>>>>>> parent of edd9782 (.)
     }
 
     return (void*)0;

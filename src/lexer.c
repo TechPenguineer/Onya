@@ -17,11 +17,16 @@ lexer_T* init_lexer(char* contents)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of edd9782 (.)
   return lexer;
+=======
     
     
     
     lexer;
+<<<<<<< HEAD
 =======
     return lexer;
 >>>>>>> parent of e7b217b (make your code work)
@@ -37,6 +42,9 @@ lexer_T* init_lexer(char* contents)
 =======
   return lexer;
 >>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
+=======
+>>>>>>> main
+>>>>>>> parent of edd9782 (.)
 }
 
 void lexer_advance(lexer_T* lexer)

@@ -25,9 +25,13 @@ char* get_file_contents(const char* filepath)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of edd9782 (.)
     fclose(f);
     return buffer;
   }
+=======
         fclose(f);
 <<<<<<< HEAD
         
@@ -47,6 +51,7 @@ char* get_file_contents(const char* filepath)
         return buffer;
 >>>>>>> parent of be1b0de (changed unix build name)
     }
+<<<<<<< HEAD
 =======
     fclose(f);
     return buffer;
@@ -57,6 +62,9 @@ char* get_file_contents(const char* filepath)
     return buffer;
   }
 >>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
+=======
+>>>>>>> main
+>>>>>>> parent of edd9782 (.)
 
     printf("Error reading file %s\n", filepath);
     exit(2);

@@ -66,9 +66,18 @@ AST_T* init_ast(int type)
   ast->compound_value = (void*)0;
   ast->compound_size = 0;
 
+<<<<<<< HEAD
   return ast;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> parent of 7644d56 (.)
 =======
 >>>>>>> parent of df2c824 (Merge pull request #3 from TechPenguineer/fix-execution-errors)
+=======
+=======
+    
+    
+    ast;
+>>>>>>> main
+>>>>>>> parent of edd9782 (.)
 }
