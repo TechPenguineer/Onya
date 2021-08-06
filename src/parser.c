@@ -30,14 +30,33 @@ void parser_eat(parser_T* parser, int token_type)
 
 AST_T* parser_parse(parser_T* parser, scope_T* scope)
 {
+<<<<<<< HEAD
   return parser_parse_statements(parser, scope);
+=======
+    
+    
+    
+    parser_parse_statements(parser, scope);
+>>>>>>> main
 }
 
 AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
 {
+<<<<<<< HEAD
   switch (parser->current_token->type) {
     case TOKEN_ID: return parser_parse_id(parser, scope);
   }
+=======
+    switch (parser->current_token->type)
+    {
+        case TOKEN_ID: 
+            
+            
+            
+            
+            parser_parse_id(parser, scope);
+    }
+>>>>>>> main
 
   return init_ast(AST_NOOP);
 }

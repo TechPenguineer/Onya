@@ -1,4 +1,4 @@
-exec = hello.out
+exec = onya.exe
 sources = $(wildcard src/*.c)
 objects = $(sources:.c=.o)
 flags = -g
@@ -10,11 +10,12 @@ $(exec): $(objects)
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
 
-install:
+install-unix:
 	make
-	cp ./hello.out /usr/local/bin/hello
+	cp ./onya.out /usr/local/bin/hello
 
 clean:
 	-rm *.out
 	-rm *.o
 	-rm src/*.o
+	-rm *.exe
