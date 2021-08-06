@@ -14,7 +14,8 @@ void lexer_advance(lexer_T* lexer)
 {
 	if (lexer->c != '\0' && lexer->i < strlen(lexer->contents)
 	{
-
+		lexer->i += 1;
+		lexer->c=contents[lexer->i];
 	}
 }
 
