@@ -1,4 +1,5 @@
 #include "include/lexer.h"
+#include "include/token.h"
 #include <stdlib.h>
 #include <string.h>
 lexer_T* init_lexer(char* contents)
@@ -38,7 +39,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 
 			switch (lexer->c)
 			{
-			case '=': return lexer_advance_with_token(); break;
+			case '=': return lexer_advance_with_token(lexer, init_token(TOKEN_EQUALS, lexer_get_current_chat_as_string(lexer))); break;
 
 			}
 		}
