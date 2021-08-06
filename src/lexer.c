@@ -57,8 +57,13 @@ token_T* lexer_collect_string(lexer_T* lexer)
 {
 	lexer_advance(lexer);
 
+	char* value = calloc(1, sizeof(char));
+	value[0] = '\0';
+
 	while (lexer->c != '"')
 	{
+		char* s = lexer_get_current_char_as_string(lexer);
+		value = realloc(value, (strlen(value) + strlen(s) + 1) * sizeof(char));
 
 	}
 
@@ -68,7 +73,7 @@ token_T* lexer_advance_with_token(lexer_T* lexer, token_T* token)
 	return token;
 }
 
-char* lexer_get_current_chat_as_string(lexer_T* lexer)
+char* lexer_get_current_char_as_string(lexer_T* lexer)
 {
 
 }
