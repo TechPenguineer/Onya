@@ -1,26 +1,25 @@
 #include "include/io.h"
-#include <stdlib.h>
 #include <stdio.h>
-
+#include <stdlib.h>
 
 char* get_file_contents(const char* filepath)
 {
-    char* buffer = 0;
-    long length;
+  char* buffer = 0;
+  long length;
 
-    FILE* f = fopen(filepath, "rb");
+  FILE* f = fopen(filepath, "rb");
 
-    if (f)
-    {
-        fseek(f, 0, SEEK_END);
-        length = ftell(f);
-        fseek(f, 0, SEEK_SET);
+  if (f) {
+    fseek(f, 0, SEEK_END);
+    length = ftell(f);
+    fseek(f, 0, SEEK_SET);
 
-        buffer = calloc(length, length);
+    buffer = calloc(length, length);
 
-        if (buffer)
-            fread(buffer, 1, length, f);
+    if (buffer)
+      fread(buffer, 1, length, f);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,6 +27,8 @@ char* get_file_contents(const char* filepath)
 <<<<<<< HEAD
 =======
 >>>>>>> parent of edd9782 (.)
+=======
+>>>>>>> parent of 651b737 (remove workflows)
     fclose(f);
     return buffer;
   }
@@ -39,6 +40,7 @@ char* get_file_contents(const char* filepath)
         
         
         buffer;
+<<<<<<< HEAD
 =======
         fclose(f);
         return buffer;
@@ -50,6 +52,8 @@ char* get_file_contents(const char* filepath)
 =======
         return buffer;
 >>>>>>> parent of be1b0de (changed unix build name)
+=======
+>>>>>>> parent of 651b737 (remove workflows)
     }
 <<<<<<< HEAD
 =======
@@ -66,6 +70,6 @@ char* get_file_contents(const char* filepath)
 >>>>>>> main
 >>>>>>> parent of edd9782 (.)
 
-    printf("Error reading file %s\n", filepath);
-    exit(2);
+  printf("Error reading file %s\n", filepath);
+  exit(2);
 }
