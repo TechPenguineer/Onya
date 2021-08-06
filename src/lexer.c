@@ -12,7 +12,10 @@ lexer_T* init_lexer(char* contents)
 
 void lexer_advance(lexer_T* lexer)
 {
-	if(lexer->c)
+	if (lexer->c != '\0' && lexer->i < strlen(lexer->contents)
+	{
+
+	}
 }
 
 void lexer_skip_whitespace(lexer_T* lexer)
