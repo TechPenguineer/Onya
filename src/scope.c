@@ -35,8 +35,8 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
     scope->function_definitions[scope->function_definitions_size-1] =
         fdef;
 
-<<<<<<< HEAD
   return fdef;
+<<<<<<< HEAD
     
     
     
@@ -48,6 +48,8 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
     return fdef;
 =======
     return fdef;
+=======
+>>>>>>> parent of 7644d56 (.)
 }
 >>>>>>> parent of be1b0de (changed unix build name)
 
@@ -59,6 +61,7 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 
     if (strcmp(fdef->function_definition_name, fname) == 0) {
       return fdef;
+<<<<<<< HEAD
     int i;
     for ( i = 0; i < scope->function_definitions_size; i++)
     {
@@ -82,6 +85,8 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
             return fdef;
 >>>>>>> parent of be1b0de (changed unix build name)
         }
+=======
+>>>>>>> parent of 7644d56 (.)
     }
 
     return (void*)0;

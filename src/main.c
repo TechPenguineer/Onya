@@ -16,6 +16,7 @@ void print_help()
 int main(int argc, char* argv[])
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (argc >= 2){
         int i;
         for( i = 1; i < argc; i++){
@@ -36,6 +37,8 @@ int main(int argc, char* argv[])
             }
         }
 =======
+=======
+>>>>>>> parent of 7644d56 (.)
   if (argc >= 2) {
     int i;
     for (i = 1; i < argc; i++) {
@@ -50,7 +53,10 @@ int main(int argc, char* argv[])
       else {
         print_help();
       }
+<<<<<<< HEAD
 >>>>>>> parent of 0b46eb2 (fix conflicts)
+=======
+>>>>>>> parent of 7644d56 (.)
     }
     else {
         char input[MAX_LIMIT];
@@ -64,5 +70,11 @@ int main(int argc, char* argv[])
             visitor_visit(visitor, root);
         }
     }
+<<<<<<< HEAD
     return 0;
 }
+=======
+  }
+  return 0;
+}
+>>>>>>> parent of 7644d56 (.)

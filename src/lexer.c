@@ -15,6 +15,7 @@ lexer_T* init_lexer(char* contents)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return lexer;
     
     
@@ -29,6 +30,9 @@ lexer_T* init_lexer(char* contents)
 =======
     return lexer;
 >>>>>>> parent of be1b0de (changed unix build name)
+=======
+  return lexer;
+>>>>>>> parent of 7644d56 (.)
 }
 
 void lexer_advance(lexer_T* lexer)
@@ -53,6 +57,9 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 7644d56 (.)
   while (lexer->c != '\0' && lexer->i < strlen(lexer->contents)) {
     if (lexer->c == ' ' || lexer->c == 10)
       lexer_skip_whitespace(lexer);
@@ -92,6 +99,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
         return lexer_advance_with_token(
           lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer)));
         break;
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of e7b217b (make your code work)
@@ -141,6 +149,8 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 >>>>>>> parent of e7b217b (make your code work)
 =======
 >>>>>>> parent of e7b217b (make your code work)
+=======
+>>>>>>> parent of 7644d56 (.)
     }
 
     return init_token(TOKEN_EOF, "\0");

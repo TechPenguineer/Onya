@@ -11,6 +11,7 @@ token_T* init_token(int type, char* value)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     token;
 =======
@@ -22,4 +23,7 @@ token_T* init_token(int type, char* value)
 =======
     return token;
 >>>>>>> parent of be1b0de (changed unix build name)
+=======
+  return token;
+>>>>>>> parent of 7644d56 (.)
 }

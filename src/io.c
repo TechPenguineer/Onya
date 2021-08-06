@@ -23,6 +23,7 @@ char* get_file_contents(const char* filepath)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fclose(f);
     return buffer;
   }
@@ -45,6 +46,11 @@ char* get_file_contents(const char* filepath)
         return buffer;
 >>>>>>> parent of be1b0de (changed unix build name)
     }
+=======
+    fclose(f);
+    return buffer;
+  }
+>>>>>>> parent of 7644d56 (.)
 
     printf("Error reading file %s\n", filepath);
     exit(2);
