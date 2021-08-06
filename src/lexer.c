@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdio.h>
 lexer_T* init_lexer(char* contents)
 {
 	lexer_T* lexer = calloc(1, sizeof(struct LEXER_STRUCT));
@@ -75,6 +76,8 @@ token_T* lexer_collect_string(lexer_T* lexer)
 		lexer_advance(lexer);
 	}
 	lexer_advance(lexer);
+
+	return init_token(TOKEN_STRING, value);
 }
 token_T* lexer_collect_id(lexer_T* lexer)
 {
@@ -85,9 +88,11 @@ token_T* lexer_collect_id(lexer_T* lexer)
 
 	while (isalnum( lexer->c ))
 	{
+		printf("%c\n", lexer->c);
 		char* s = lexer_get_current_char_as_string(lexer);
 		value = realloc(value, (strlen(value) + strlen(s) + 1) * sizeof(char));
 		strcat(value, s);
+		lexer_advance(lexer);
 	}
 	lexer_advance(lexer);
 
