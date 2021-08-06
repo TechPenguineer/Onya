@@ -91,7 +91,6 @@ token_T* lexer_collect_string(lexer_T* lexer)
 		strcat(value, s);
 		lexer_advance(lexer);
 	}
-	lexer_advance(lexer);
 
 	return init_token(TOKEN_STRING, value);
 }
@@ -111,7 +110,6 @@ token_T* lexer_collect_id(lexer_T* lexer)
 		strcat(value, s);
 		lexer_advance(lexer);
 	}
-	lexer_advance(lexer);
 
 	return init_token(TOKEN_ID, value);
 }
