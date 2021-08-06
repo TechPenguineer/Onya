@@ -2,3 +2,4 @@ dist/
 .vs/*
 *.o
 *.out
+*.exe

@@ -2,7 +2,8 @@ exec=onya.exe
 sources=$(wildcard src/*.c)
 objects=$(sources:.c=.o)
 
-flags=-g
+flags=-g -Wno-eof-newline
+
 
 $(exec): $(objects)
 	gcc $(objects) $(flags) -o $(exec)
@@ -14,6 +15,6 @@ install:
 	make
 	cp ./$(exec) $(wildcard appdata)
 clean:
-	-rm *.out 
+	-rm *.exe
 	-rm *.o
 	-rm src*.o

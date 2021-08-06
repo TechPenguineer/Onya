@@ -13,10 +13,10 @@ lexer_T* init_lexer(char* contents)
 
 void lexer_advance(lexer_T* lexer)
 {
-	if (lexer->c != '\0' && lexer->i < strlen(lexer->contents)
+	if (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
 	{
 		lexer->i += 1;
-		lexer->c=lexer->conents[lexer->i];
+		lexer->c=lexer->contents[lexer->i];
 	}
 }
 
@@ -30,7 +30,10 @@ void lexer_skip_whitespace(lexer_T* lexer)
 
 token_T* lexer_get_next_token(lexer_T* lexer)
 {
+	while (lexer->c != '\0' && lexer->i < strlen(lexer->contents))
+	{
 
+	}
 }
 
 token_T* lexer_collect_string(lexer_T* lexer)
