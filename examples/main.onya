@@ -1,3 +1,0 @@
-var name = "BOB"
-
-print(name);
