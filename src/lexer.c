@@ -77,8 +77,6 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 
 token_T* lexer_collect_string(lexer_T* lexer)
 {
-	lexer_advance(lexer);
-
 	char* value = calloc(1, sizeof(char));
 	value[0] = '\0';
 
@@ -97,8 +95,6 @@ token_T* lexer_collect_string(lexer_T* lexer)
 }
 token_T* lexer_collect_id(lexer_T* lexer)
 {
-	lexer_advance(lexer);
-
 	char* value = calloc(1, sizeof(char));
 	value[0] = '\0';
 
