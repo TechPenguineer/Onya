@@ -22,7 +22,11 @@ char* get_file_contents(const char* filepath)
             fread(buffer, 1, length, f);
 
         fclose(f);
-        return buffer;
+        
+        
+        
+        
+        buffer;
     }
 
     printf("Error reading file %s\n", filepath);

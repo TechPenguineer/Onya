@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
         int i;
         for( i = 1; i < argc; i++){
             int len = strlen(argv[i]);
-            char* last_four = &argv[i][len-6];
+            char* last_four = &argv[i][len-5];
             if(strcmp(last_four,".onya") == 0){
                                 lexer_T* lexer = init_lexer(
                     get_file_contents(argv[i])
@@ -28,6 +28,7 @@ int main(int argc, char* argv[])
                 AST_T* root = parser_parse(parser, parser->scope);
                 visitor_T* visitor = init_visitor();
                 visitor_visit(visitor, root);
+                
             }
 
             else {
@@ -47,5 +48,8 @@ int main(int argc, char* argv[])
             visitor_visit(visitor, root);
         }
     }
-    return 0;
+    
+    
+    
+    0;
 }

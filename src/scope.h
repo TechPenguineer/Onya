@@ -6,13 +6,16 @@ scope_T* init_scope()
 {
     scope_T* scope = calloc(1, sizeof(struct SCOPE_STRUCT));
 
-    scope->function_definitions = (void*) 0;
+    scope->function_definitions = (void*)0;
     scope->function_definitions_size = 0;
 
-    scope->variable_definitions = (void*) 0;
+    scope->variable_definitions = (void*)0;
     scope->variable_definitions_size = 0;
 
-    return scope;
+    
+    
+    
+    scope;
 }
 
 AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
@@ -32,31 +35,21 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
             );
     }
 
-    scope->function_definitions[scope->function_definitions_size-1] =
+    scope->function_definitions[scope->function_definitions_size - 1] =
         fdef;
 
-    
-    
-    
-    
-    fdef;
+    return fdef;
 }
 
 AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 {
-    int i;
-    for ( i = 0; i < scope->function_definitions_size; i++)
+    for (int i = 0; i < scope->function_definitions_size; i++)
     {
         AST_T* fdef = scope->function_definitions[i];
 
         if (strcmp(fdef->function_definition_name, fname) == 0)
         {
-            
-            
-            
-            
-            
-            fdef;
+            return fdef;
         }
     }
 
@@ -65,7 +58,7 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 
 AST_T* scope_add_variable_definition(scope_T* scope, AST_T* vdef)
 {
-    if (scope->variable_definitions == (void*) 0)
+    if (scope->variable_definitions == (void*)0)
     {
         scope->variable_definitions = calloc(1, sizeof(struct AST_STRUCT*));
         scope->variable_definitions[0] = vdef;
@@ -76,9 +69,9 @@ AST_T* scope_add_variable_definition(scope_T* scope, AST_T* vdef)
         scope->variable_definitions_size += 1;
         scope->variable_definitions = realloc(
             scope->variable_definitions,
-            scope->variable_definitions_size * sizeof(struct AST_STRUCT*)  
+            scope->variable_definitions_size * sizeof(struct AST_STRUCT*)
         );
-        scope->variable_definitions[scope->variable_definitions_size-1] = vdef;
+        scope->variable_definitions[scope->variable_definitions_size - 1] = vdef;
     }
 
     return vdef;
@@ -86,8 +79,7 @@ AST_T* scope_add_variable_definition(scope_T* scope, AST_T* vdef)
 
 AST_T* scope_get_variable_definition(scope_T* scope, const char* name)
 {
-    int i;
-    for ( i = 0; i < scope->variable_definitions_size; i++)
+    for (int i = 0; i < scope->variable_definitions_size; i++)
     {
         AST_T* vdef = scope->variable_definitions[i];
 
