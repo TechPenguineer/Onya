@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 #include "include/lexer.h"
@@ -8,7 +9,7 @@
 #define MAX_LIMIT 20
 void print_help()
 {
-    printf("Usage:\nOnya <filename>\n");
+    printf("Usage:\nhello.out <filename>\n");
     exit(1);
 }
 

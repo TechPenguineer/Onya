@@ -1,8 +1,7 @@
-exec=onya.exe
-sources=$(wildcard src/*.c)
-objects=$(sources:.c=.o)
-
-flags=-g 
+exec = hello.out
+sources = $(wildcard src/*.c)
+objects = $(sources:.c=.o)
+flags = -g
 
 
 $(exec): $(objects)
@@ -13,8 +12,9 @@ $(exec): $(objects)
 
 install:
 	make
-	cp ./$(exec) $(wildcard appdata)
+	cp ./hello.out /usr/local/bin/hello
+
 clean:
-	-rm *.exe
+	-rm *.out
 	-rm *.o
 	-rm src/*.o
