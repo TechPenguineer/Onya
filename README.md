@@ -42,19 +42,14 @@ function DoSomething(name)
 DoSomething("John");
 ```
  **Output:**<br>
-<<<<<<< HEAD
- `>` `Hello, John`
+
+`>` `Hello, John`
  
  # Contributers
-<<<<<<< HEAD
  
  
 <a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
 </a>
-=======
  `>` `Hello, John`
->>>>>>> parent of 11f5faa (Merge branch 'main' of https://github.com/TechPenguineer/Onya into main)
-=======
  ![GitHub Contributors Image](https://contrib.rocks/image?repo=TechPenguineer/Hypermc)
->>>>>>> parent of cf0d0ab (Update README.md)
