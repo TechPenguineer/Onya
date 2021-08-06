@@ -103,6 +103,7 @@ AST_T* visitor_visit_variable(visitor_T* visitor, AST_T* node)
 
 AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
 {
+<<<<<<< HEAD
   if (strcmp(node->function_call_name, "print") == 0) {
     return builtin_function_print(
       visitor, node->function_call_arguments, node->function_call_arguments_size);
@@ -154,6 +155,61 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
   }
 
   return visitor_visit(visitor, fdef->function_definition_body);
+=======
+    if (strcmp(node->function_call_name, "print") == 0)
+    {
+        return builtin_function_print(visitor, node->function_c
+            
+            
+            
+            ll_arguments, node->function_call_arguments_size);
+    }
+
+    if (strcmp(node->function_call_name, "exit"||"quit") == 0)
+    {
+        return builtin_function_exit(visitor, node->function_call_arguments, node->function_call_arguments_size);
+    }
+
+    if (strcmp(node->function_call_name, "clear") == 0)
+    {
+        return builtin_function_clear(visitor, node->function_call_arguments, node->function_call_arguments_size);
+    }
+
+    AST_T* fdef = scope_get_function_definition(
+        node->scope,
+        node->function_call_name
+    );
+
+    if (fdef == (void*)0)
+    {
+        printf("Undefined method `%s`\n", node->function_call_name);
+        exit(1);
+    }
+    int i;
+    for ( i = 0; i < (int) node->function_call_arguments_size; i++)
+    {
+        // grab the variable from the function definition arguments
+        AST_T* ast_var = (AST_T*) fdef->function_definition_args[i];
+
+        // grab the value from the function call arguments
+        AST_T* ast_value = (AST_T*) node->function_call_arguments[i];
+
+        // create a new variable definition with the value of the argument
+        // in the function call.
+        AST_T* ast_vardef = init_ast(AST_VARIABLE_DEFINITION);
+        ast_vardef->variable_definition_value = ast_value;
+
+        // copy the name from the function definition argument into the new
+        // variable definition
+        ast_vardef->variable_definition_variable_name = (char*) calloc(strlen(ast_var->variable_name) + 1, sizeof(char));
+        strcpy(ast_vardef->variable_definition_variable_name, ast_var->variable_name);
+
+        // push our variable definition into the function body scope.
+        scope_add_variable_definition(fdef->function_definition_body->scope, ast_vardef);
+    }
+    
+    return visitor_visit(visitor, fdef->function_definition_body);
+>>>>>>> main
 }
 
 AST_T* visitor_visit_string(visitor_T* visitor, AST_T* node)

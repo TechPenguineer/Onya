@@ -19,9 +19,19 @@ char* get_file_contents(const char* filepath)
     if (buffer)
       fread(buffer, 1, length, f);
 
+<<<<<<< HEAD
     fclose(f);
     return buffer;
   }
+=======
+        fclose(f);
+        
+        
+        
+        
+        buffer;
+    }
+>>>>>>> main
 
   printf("Error reading file %s\n", filepath);
   exit(2);
