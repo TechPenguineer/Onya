@@ -76,6 +76,7 @@ int main(int argc, char* argv[])
       else {
         print_help();
       }
+
     }
   } else {
     char input[MAX_LIMIT];
