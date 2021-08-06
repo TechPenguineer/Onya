@@ -27,6 +27,7 @@ char* get_file_contents(const char* filepath)
     return buffer;
   }
         fclose(f);
+<<<<<<< HEAD
         
         
         
@@ -40,6 +41,9 @@ char* get_file_contents(const char* filepath)
         fclose(f);
         return buffer;
 >>>>>>> parent of e7b217b (make your code work)
+=======
+        return buffer;
+>>>>>>> parent of be1b0de (changed unix build name)
     }
 
     printf("Error reading file %s\n", filepath);

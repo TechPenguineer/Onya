@@ -120,6 +120,7 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return builtin_function_print(visitor, node->function_c
             
             
@@ -131,6 +132,9 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
 =======
         return builtin_function_print(visitor, node->function_call_arguments, node->function_call_arguments_size);
 >>>>>>> parent of e7b217b (make your code work)
+=======
+        return builtin_function_print(visitor, node->function_call_arguments, node->function_call_arguments_size);
+>>>>>>> parent of be1b0de (changed unix build name)
     }
 
     if (strcmp(node->function_call_name, "exit"||"quit") == 0)

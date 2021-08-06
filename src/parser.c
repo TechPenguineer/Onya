@@ -39,6 +39,7 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return parser_parse_statements(parser, scope);
 =======
     
@@ -52,6 +53,9 @@ AST_T* parser_parse(parser_T* parser, scope_T* scope)
 =======
     return parser_parse_statements(parser, scope);
 >>>>>>> parent of e7b217b (make your code work)
+=======
+    return parser_parse_statements(parser, scope);
+>>>>>>> parent of be1b0de (changed unix build name)
 }
 
 AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
@@ -65,12 +69,7 @@ AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
 =======
     switch (parser->current_token->type)
     {
-        case TOKEN_ID: 
-            
-            
-            
-            
-            parser_parse_id(parser, scope);
+        case TOKEN_ID: return parser_parse_id(parser, scope);
     }
 >>>>>>> main
 =======

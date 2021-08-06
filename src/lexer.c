@@ -14,6 +14,7 @@ lexer_T* init_lexer(char* contents)
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return lexer;
     
     
@@ -25,6 +26,9 @@ lexer_T* init_lexer(char* contents)
 =======
     return lexer;
 >>>>>>> parent of e7b217b (make your code work)
+=======
+    return lexer;
+>>>>>>> parent of be1b0de (changed unix build name)
 }
 
 void lexer_advance(lexer_T* lexer)
@@ -101,6 +105,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
         if (isalnum(lexer->c))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             
             
             
@@ -112,6 +117,9 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 =======
             return lexer_collect_id(lexer);
 >>>>>>> parent of e7b217b (make your code work)
+=======
+            return lexer_collect_id(lexer);
+>>>>>>> parent of be1b0de (changed unix build name)
 
         if (lexer->c == '"')
             return lexer_collect_string(lexer);
