@@ -42,6 +42,7 @@ function DoSomething(name)
 DoSomething("John");
 ```
  **Output:**<br>
+<<<<<<< HEAD
  `>` `Hello, John`
  
  # Contributers
@@ -50,3 +51,6 @@ DoSomething("John");
 <a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
 </a>
+=======
+ `>` `Hello, John`
+>>>>>>> parent of 11f5faa (Merge branch 'main' of https://github.com/TechPenguineer/Onya into main)
