@@ -11,14 +11,11 @@ lexer_T* init_lexer(char* contents)
   lexer->i = 0;
   lexer->c = contents[lexer->i];
 
-<<<<<<< HEAD
   return lexer;
-=======
     
     
     
     lexer;
->>>>>>> main
 }
 
 void lexer_advance(lexer_T* lexer)

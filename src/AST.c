@@ -32,11 +32,5 @@ AST_T* init_ast(int type)
   ast->compound_value = (void*)0;
   ast->compound_size = 0;
 
-<<<<<<< HEAD
   return ast;
-=======
-    
-    
-    ast;
->>>>>>> main
 }

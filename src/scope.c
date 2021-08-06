@@ -27,27 +27,22 @@ AST_T* scope_add_function_definition(scope_T* scope, AST_T* fdef)
 
   scope->function_definitions[scope->function_definitions_size - 1] = fdef;
 
-<<<<<<< HEAD
   return fdef;
-=======
     
     
     
     
     fdef;
->>>>>>> main
 }
 
 AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
 {
-<<<<<<< HEAD
   int i;
   for (i = 0; i < scope->function_definitions_size; i++) {
     AST_T* fdef = scope->function_definitions[i];
 
     if (strcmp(fdef->function_definition_name, fname) == 0) {
       return fdef;
-=======
     int i;
     for ( i = 0; i < scope->function_definitions_size; i++)
     {
@@ -62,7 +57,6 @@ AST_T* scope_get_function_definition(scope_T* scope, const char* fname)
             
             fdef;
         }
->>>>>>> main
     }
   }
 
