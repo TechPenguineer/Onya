@@ -15,6 +15,7 @@ void print_help()
 
 int main(int argc, char* argv[])
 {
+<<<<<<< HEAD
     if (argc >= 2){
         int i;
         for( i = 1; i < argc; i++){
@@ -34,6 +35,22 @@ int main(int argc, char* argv[])
                 print_help();
             }
         }
+=======
+  if (argc >= 2) {
+    int i;
+    for (i = 1; i < argc; i++) {
+      if (has_ext(argv[i], "onya")) {
+        lexer_T* lexer = init_lexer(get_file_contents(argv[i]));
+        parser_T* parser = init_parser(lexer);
+        AST_T* root = parser_parse(parser, parser->scope);
+        visitor_T* visitor = init_visitor();
+        visitor_visit(visitor, root);
+      }
+
+      else {
+        print_help();
+      }
+>>>>>>> parent of 0b46eb2 (fix conflicts)
     }
     else {
         char input[MAX_LIMIT];
