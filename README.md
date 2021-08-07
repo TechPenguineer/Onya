@@ -1,4 +1,4 @@
-![BANNER](docs/banner.png)
+![BANNER](docs/img/banner.png)
 <hr>
 
  An open source general purpose programming language!
