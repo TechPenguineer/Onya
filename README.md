@@ -1,7 +1,7 @@
 ![BANNER](docs/img/banner.png)
 <hr>
 
- An open source general purpose programming language!
+ An open source general purpose high-level programming language!
 
 # How to install
 ### **Window**
