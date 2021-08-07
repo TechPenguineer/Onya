@@ -43,20 +43,50 @@ DoSomething("John");
 ```
  **Output:**<br>
  `>` `Hello, John`
- 
+
+ # What is it going to look like?
+
+## Printing:
+<br>
+
+**Print Line**
+```js
+  // INPUT
+  println("A");
+  println("B");
+
+  // OUTPUT
+  > A
+  > B
+```
+**Print**
+```js
+  // INPUT
+  print("A");
+  print("B");
+
+  // Output
+  > AB
+```
+
+**Print Variables**
+```js
+  // INPUT
+  var word1 = "one";
+  var word2 = "four";
+
+  println(word1," two three ", word2);
+
+  //OUTPUT
+  > one two three four
+```
+
+
  # Contributers
-<<<<<<< HEAD
  
  
 <a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
 </a>
-<<<<<<< HEAD
-=======
- `>` `Hello, John`
->>>>>>> parent of 11f5faa (Merge branch 'main' of https://github.com/TechPenguineer/Onya into main)
-=======
- ![GitHub Contributors Image](https://contrib.rocks/image?repo=TechPenguineer/Hypermc)
->>>>>>> parent of cf0d0ab (Update README.md)
-=======
->>>>>>> parent of 456f1f2 (remove workflows)
+
+
