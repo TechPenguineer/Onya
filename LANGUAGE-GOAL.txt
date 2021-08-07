@@ -1,10 +1,8 @@
-Functions:
+To Do:
+    - Fix multiline parser
+    - Create Syntax Lighting
+    - Add basic math
+    - Create language support
 
-fn DoSomething <ARG>
-{
-    println <ARG>;
-};
-
-DoSomething(1);
-// OUTPUT
-> 1
+Language Functions To Add :
+    - 

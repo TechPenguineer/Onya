@@ -120,16 +120,12 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
     return builtin_function_println(
       visitor, node->function_call_arguments, node->function_call_arguments_size);
   }
+  
   else if (strcmp(node->function_call_name, "print") == 0)
   {
     return builtin_function_print(
       visitor, node->function_call_arguments, node->function_call_arguments_size);
   }
-
-
-
-
-
 
   if (strcmp(node->function_call_name, "quit") == 0 ||
       strcmp(node->function_call_name, "exit") == 0) {

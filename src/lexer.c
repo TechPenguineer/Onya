@@ -21,7 +21,13 @@ void lexer_advance(lexer_T* lexer)
     lexer->c = lexer->contents[lexer->i];
   }
 }
-
+void lexer_skip_line(lexer_T* lexar)
+{
+    while (lexar->c == '\n')
+    {
+        lexer_advance(lexer_advance);
+    }
+}
 void lexer_skip_whitespace(lexer_T* lexer)
 {
   while (lexer->c == ' ' || lexer->c == 10) {
@@ -40,7 +46,9 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 
     if (lexer->c == '"')
       return lexer_collect_string(lexer);
-
+    if (lexer->c == '\n')
+         lexer_skip_line(lexer);
+    
     switch (lexer->c) {
       case '=':
         return lexer_advance_with_token(
