@@ -31,9 +31,9 @@ After installing all you have to do is type `onya help` you will get a prompt gi
 
 <br>
 
-## Functions
+## fn
 ```javascript
-function DoSomething()
+fn DoSomething()
 {
     println >"Hello World!"<;
 };
@@ -43,9 +43,9 @@ DoSomething();
  **Output:**<br>
  `>` `Hello World!`
 
- ## Functions Arguments
+ ## fn Arguments
 ```javascript
-function DoSomething(name)
+fn DoSomething(name)
 {
     print>"Hello, ", name <;
 };
