@@ -1,1 +1,1 @@
-fn hi<name>{ println<"Hi, ",name>; }; hi<"bob">;
+println<"Hey">; println<"Bob">;
