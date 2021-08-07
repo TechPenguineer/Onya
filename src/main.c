@@ -84,7 +84,7 @@ int main(int argc, char* argv[])
   } else {
     char input[MAX_LIMIT];
     while (1) {
-      printf("Welcome to the Onya language v. 0.0.1!\nCreated by Tech Penguineer\n>>> ");
+      printf("Welcome to the Onya language v. 0.0.1!\nCreated by Tech Penguin, INCs\n>>> ");
       fgets(input, MAX_LIMIT, stdin);
       lexer_T* lexer = init_lexer(input);
       parser_T* parser = init_parser(lexer);
