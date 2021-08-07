@@ -10,7 +10,7 @@ $(exec): $(objects)
 %.o: %.c include/%.h
 	gcc -c $(flags) $< -o $@
 
-linux:
+install:
 	gcc $(objects) $(flags) -o /usr/local/bin/Onya
 
 linux-build:
