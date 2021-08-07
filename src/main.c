@@ -64,6 +64,7 @@ unsigned int has_ext(const char* filename, const char* ext)
 
 int main(int argc, char* argv[])
 {
+  putenv("Path = C:\\Program Files\\Onya");
   if (argc >= 2) {
     int i;
     for (i = 1; i < argc; i++) {
