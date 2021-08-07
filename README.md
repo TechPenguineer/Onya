@@ -1,4 +1,4 @@
-![BANNER](docs/img/banner.png)
+![BANNER] >docs/img/banner.png<
 <hr>
 
  An open source general purpose programming language!
@@ -8,9 +8,9 @@
 - Step 1: <br> Install the setup <br><br>
 - Step 2: <br> Press the windows key and search for "Edit the System and Enviroment Variables"<br><br>
 - Step 3: <br> Press `Enviroment Variables` <br><br>
-- Step 4: <br> Go to where it says "System Variables" and double click the word "Path" (You may need to scroll down a little) <br><br>
+- Step 4: <br> Go to where it says "System Variables" and double click the word "Path"  >You may need to scroll down a little< <br><br>
 - Step 5: <br> Then press the button that says "New"<br><br>
-- Step 6:<br>Then type in this: <br> `C:\Program Files (x86)\Onya<br><br>
+- Step 6:<br>Then type in this: <br> `C:\Program Files  >x86<\Onya<br><br>
 - Step 7: <br> Test it to see if it works by going into a command prompt and typing `onya help`
 
 
@@ -33,24 +33,24 @@ After installing all you have to do is type `onya help` you will get a prompt gi
 
 ## fn
 ```javascript
-fn DoSomething()
+fn DoSomething ><
 {
     println >"Hello World!"<;
 };
 
-DoSomething();
+DoSomething ><;
 ```
  **Output:**<br>
  `>` `Hello World!`
 
  ## fn Arguments
 ```javascript
-fn DoSomething(name)
+fn DoSomething >name<
 {
     print>"Hello, ", name <;
 };
 
-DoSomething("John");
+DoSomething >"John"<;
 ```
  **Output:**<br>
  `>` `Hello, John`
