@@ -1,5 +1,5 @@
-![BANNER] >docs/img/banner.png>
->hr>
+![BANNER](docs/img/banner.png)
+<hr>
 
  An open source general purpose programming language!
 
