@@ -1,5 +1,5 @@
-![BANNER] >docs/img/banner.png<
-<hr>
+![BANNER] >docs/img/banner.png>
+>hr>
 
  An open source general purpose programming language!
 
@@ -8,9 +8,9 @@
 - Step 1: <br> Install the setup <br><br>
 - Step 2: <br> Press the windows key and search for "Edit the System and Enviroment Variables"<br><br>
 - Step 3: <br> Press `Enviroment Variables` <br><br>
-- Step 4: <br> Go to where it says "System Variables" and double click the word "Path"  >You may need to scroll down a little< <br><br>
+- Step 4: <br> Go to where it says "System Variables" and double click the word "Path"  >You may need to scroll down a little> <br><br>
 - Step 5: <br> Then press the button that says "New"<br><br>
-- Step 6:<br>Then type in this: <br> `C:\Program Files  >x86<\Onya<br><br>
+- Step 6:<br>Then type in this: <br> `C:\Program Files  >x86>\Onya<br><br>
 - Step 7: <br> Test it to see if it works by going into a command prompt and typing `onya help`
 
 
@@ -24,7 +24,7 @@ After installing all you have to do is type `onya help` you will get a prompt gi
  ```javascript
  var x = "Hello";
  var y = " World";
- println >x,y<;
+ println <x,y>;
  ```
  **Output:**<br>
  `>` `Hello World`
@@ -33,24 +33,24 @@ After installing all you have to do is type `onya help` you will get a prompt gi
 
 ## fn
 ```javascript
-fn DoSomething ><
+fn DoSomething <>
 {
-    println >"Hello World!"<;
+    println <"Hello World!">;
 };
 
-DoSomething ><;
+DoSomething <>;
 ```
- **Output:**<br>
+ **Output:** <br>
  `>` `Hello World!`
 
  ## fn Arguments
 ```javascript
-fn DoSomething >name<
+fn DoSomething <name>
 {
-    print>"Hello, ", name <;
+    print <"Hello, ", name >;
 };
 
-DoSomething >"John"<;
+DoSomething <"John">;
 ```
  **Output:**<br>
  `>` `Hello, John`
@@ -63,8 +63,8 @@ DoSomething >"John"<;
 **Print Line**
 ```js
   // INPUT
-  println >"A"<;
-  println >"B"<;
+  println <"A">;
+  println <"B">;
 
   // OUTPUT
   > A
@@ -73,8 +73,8 @@ DoSomething >"John"<;
 **Print**
 ```js
   // INPUT
-  print >"A"<;
-  print >"B"<;
+  print <"A">;
+  print <"B">;
 
   // Output
   > AB
@@ -86,7 +86,7 @@ DoSomething >"John"<;
   var word1 = "one";
   var word2 = "four";
 
-  println >word1," two three ", word2<;
+  println >word1," two three ", word2>;
 
   //OUTPUT
   > one two three four
@@ -96,8 +96,8 @@ DoSomething >"John"<;
  # Contributers
  
  
-<a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
-</a>
+>a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
+  >img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
+>/a>
 
 

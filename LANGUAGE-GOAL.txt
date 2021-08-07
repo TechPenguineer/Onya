@@ -1,0 +1,10 @@
+Functions:
+
+fn DoSomething <ARG>
+{
+    println <ARG>;
+};
+
+DoSomething(1);
+// OUTPUT
+> 1
