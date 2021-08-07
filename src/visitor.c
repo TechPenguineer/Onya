@@ -10,22 +10,7 @@ static AST_T* builtin_function_print(visitor_T* visitor, AST_T** args, int args_
     AST_T* visited_ast = visitor_visit(visitor, args[i]);
 
     switch (visited_ast->type) {
-      case AST_STRING: printf("%s", visited_ast->string_value); break;
-      default: printf("%p\n", visited_ast); break;
-    }
-  }
-
-  return init_ast(AST_NOOP);
-}
-
-static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int args_size)
-{
-  int i;
-  for (i = 0; i < args_size; i++) {
-    AST_T* visited_ast = visitor_visit(visitor, args[i]);
-
-    switch (visited_ast->type) {
-      case AST_STRING: printf("%s", visited_ast->string_value); break;
+      case AST_STRING: printf("%s\n", visited_ast->string_value); break;
       default: printf("%p\n", visited_ast); break;
     }
   }
@@ -120,13 +105,8 @@ AST_T* visitor_visit_variable(visitor_T* visitor, AST_T* node)
 
 AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
 {
-  if (strcmp(node->function_call_name, "print") == 0) {
+  if (strcmp(node->function_call_name, "println") == 0) {
     return builtin_function_print(
-      visitor, node->function_call_arguments, node->function_call_arguments_size);
-  }
-
-   if (strcmp(node->function_call_name, "println") == 0) {
-    return builtin_function_println(
       visitor, node->function_call_arguments, node->function_call_arguments_size);
   }
 

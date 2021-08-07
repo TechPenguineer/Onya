@@ -20,3 +20,4 @@ clean:
 	-rm *.out
 	-rm *.o
 	-rm src/*.o
+	-rm *.exe
