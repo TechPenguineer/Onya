@@ -8,7 +8,7 @@
 !define COMP_NAME "Tech Penguin, INC"
 !define WEB_SITE "https://github.com/TechPenguineer/Onya"
 !define VERSION "00.00.00.01"
-!define COPYRIGHT "Tech Penguin, INC © 2006"
+!define COPYRIGHT "Tech Penguin, INC ï¿½ 2006"
 !define DESCRIPTION "An open-source general-purpose programming language"
 !define INSTALLER_NAME "D:\DEV\apps\OnyaNew\platforms\win\win-onya-0001-setup.exe"
 !define MAIN_APP_EXE "onya.exe"
@@ -38,7 +38,6 @@ InstallDirRegKey "${REG_ROOT}" "${REG_APP_PATH}" ""
 InstallDir "$PROGRAMFILES\Onya"
 
 ######################################################################
-
 !include "MUI.nsh"
 
 !define MUI_ABORTWARNING
@@ -108,6 +107,9 @@ CreateDirectory "$SMPROGRAMS\$SM_Folder"
 CreateShortCut "$SMPROGRAMS\$SM_Folder\${APP_NAME}.lnk" "$INSTDIR\${MAIN_APP_EXE}"
 CreateShortCut "$SMPROGRAMS\$SM_Folder\Uninstall ${APP_NAME}.lnk" "$INSTDIR\uninstall.exe"
 
+System::Call 'KERNEL32::SetEnvironmentVariable(t "PATH", t "%PROGRAMFILES\")i.r2'
+
+
 !ifdef WEB_SITE
 WriteIniStr "$INSTDIR\${APP_NAME} website.url" "InternetShortcut" "URL" "${WEB_SITE}"
 CreateShortCut "$SMPROGRAMS\$SM_Folder\${APP_NAME} Website.lnk" "$INSTDIR\${APP_NAME} website.url"
@@ -137,6 +139,7 @@ WriteRegStr ${REG_ROOT} "${UNINSTALL_PATH}"  "Publisher" "${COMP_NAME}"
 WriteRegStr ${REG_ROOT} "${UNINSTALL_PATH}"  "URLInfoAbout" "${WEB_SITE}"
 !endif
 SectionEnd
+
 
 ######################################################################
 
