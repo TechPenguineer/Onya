@@ -29,18 +29,12 @@ void lexer_skip_whitespace(lexer_T* lexer)
   }
 }
 
-void lexer_skip_new_line(lexer_T* lexer)
-{
-  while (lexer->c == '\n') {
-    lexer_advance(lexer);
-  }
-}
-
 token_T* lexer_get_next_token(lexer_T* lexer)
 {
   while (lexer->c != '\0' && lexer->i < strlen(lexer->contents)) {
     if (lexer->c == ' ' || lexer->c == 10)
       lexer_skip_whitespace(lexer);
+
     if (isalnum(lexer->c))
       return lexer_collect_id(lexer);
 

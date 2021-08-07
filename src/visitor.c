@@ -10,14 +10,12 @@ static AST_T* builtin_function_print(visitor_T* visitor, AST_T** args, int args_
     AST_T* visited_ast = visitor_visit(visitor, args[i]);
 
     switch (visited_ast->type) {
-      case AST_STRING: printf("%s\n", visited_ast->string_value); break;
-      default: printf("%p\n", visited_ast); break;
+      case AST_STRING: printf("%s", visited_ast->string_value); break;default: printf("%p ", visited_ast); break;
     }
   }
 
   return init_ast(AST_NOOP);
 }
-
 
 
 static AST_T* builtin_function_exit(visitor_T* visitor, AST_T** args, int args_size)
@@ -28,7 +26,7 @@ static AST_T* builtin_function_exit(visitor_T* visitor, AST_T** args, int args_s
 
     switch (visited_ast->type) {
       case AST_NOOP:
-        printf("You exited\n");
+        printf("You exited");
         exit(0);
         break;
       default: printf("%p\n", visited_ast); break;

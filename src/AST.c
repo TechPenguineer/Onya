@@ -32,5 +32,7 @@ AST_T* init_ast(int type)
   ast->compound_value = (void*)0;
   ast->compound_size = 0;
 
+  ast->comment_content = (void*)0;
+
   return ast;
 }

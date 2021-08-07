@@ -11,7 +11,8 @@ typedef struct AST_STRUCT
         AST_FUNCTION_CALL,
         AST_STRING,
         AST_COMPOUND,
-        AST_NOOP
+        AST_NOOP,
+        AST_COMMENT
     } type;
 
     struct SCOPE_STRUCT* scope;
@@ -28,6 +29,9 @@ typedef struct AST_STRUCT
 
     /* AST_VARIABLE */
     char* variable_name;
+
+    /* AST_NOTE */
+    char* comment_content;
 
     /* AST_FUNCTION_CALL */
     char* function_call_name;

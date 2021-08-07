@@ -91,13 +91,16 @@ DoSomething <"John">;
   //OUTPUT
   > one two three four
 ```
+# History
 
-
+### **First ever working line of code:**
+![IMG](https://i.imgur.com/BbSbNWR_d.webp?maxwidth=760&fidelity=grand)
+> 8/7/2021
  # Contributers
  
  
->a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
-  >img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
->/a>
+<a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
+</a>
 
 
