@@ -24,7 +24,7 @@ After installing all you have to do is type `onya help` you will get a prompt gi
  ```javascript
  var x = "Hello";
  var y = " World";
- print(x,y);
+ println >x,y<;
  ```
  **Output:**<br>
  `>` `Hello World`
@@ -35,7 +35,7 @@ After installing all you have to do is type `onya help` you will get a prompt gi
 ```javascript
 function DoSomething()
 {
-    print("Hello World!");
+    println >"Hello World!"<;
 };
 
 DoSomething();
@@ -47,7 +47,7 @@ DoSomething();
 ```javascript
 function DoSomething(name)
 {
-    print("Hello, ", name);
+    print>"Hello, ", name <;
 };
 
 DoSomething("John");
@@ -63,8 +63,8 @@ DoSomething("John");
 **Print Line**
 ```js
   // INPUT
-  println("A");
-  println("B");
+  println >"A"<;
+  println >"B"<;
 
   // OUTPUT
   > A
@@ -73,8 +73,8 @@ DoSomething("John");
 **Print**
 ```js
   // INPUT
-  print("A");
-  print("B");
+  print >"A"<;
+  print >"B"<;
 
   // Output
   > AB
@@ -86,7 +86,7 @@ DoSomething("John");
   var word1 = "one";
   var word2 = "four";
 
-  println(word1," two three ", word2);
+  println >word1," two three ", word2<;
 
   //OUTPUT
   > one two three four
