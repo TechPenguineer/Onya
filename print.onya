@@ -1,1 +1,2 @@
-print<"Hey">;
+println<"Hey">
+println<"HI">;

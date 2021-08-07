@@ -46,8 +46,8 @@ token_T* lexer_get_next_token(lexer_T* lexer)
 
     if (lexer->c == '"')
       return lexer_collect_string(lexer);
-    if (lexer->c == '\n')
-         lexer_skip_line(lexer);
+
+    printf("ID: %i TOKEN: %c\n", lexer->i, lexer->c );
     
     switch (lexer->c) {
       case '=':
@@ -78,6 +78,10 @@ token_T* lexer_get_next_token(lexer_T* lexer)
         return lexer_advance_with_token(
           lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer)));
         break;
+      case '\0':
+          return lexer_advance_with_token(
+              lexer, init_token(TOKEN_EOF, lexer_get_current_char_as_string(lexer)));
+          break;
     }
   }
 

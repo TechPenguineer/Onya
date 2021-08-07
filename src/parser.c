@@ -44,6 +44,8 @@ AST_T* parser_parse_statement(parser_T* parser, scope_T* scope)
 
 AST_T* parser_parse_statements(parser_T* parser, scope_T* scope)
 {
+
+
   AST_T* compound = init_ast(AST_COMPOUND);
   compound->scope = scope;
   compound->compound_value = calloc(1, sizeof(struct AST_STRUCT*));
@@ -63,9 +65,12 @@ AST_T* parser_parse_statements(parser_T* parser, scope_T* scope)
       compound->compound_value =
         realloc(compound->compound_value, compound->compound_size * sizeof(struct AST_STRUCT*));
       compound->compound_value[compound->compound_size - 1] = ast_statement;
-    }
-  }
+      lexer_advance(parser->lexer);
+      printf("%c", compound->compound_value);
 
+    }
+
+  }
   return compound;
 }
 
@@ -75,7 +80,7 @@ AST_T* parser_parse_expr(parser_T* parser, scope_T* scope)
     case TOKEN_STRING: return parser_parse_string(parser, scope);
     case TOKEN_ID: return parser_parse_id(parser, scope);
   }
-
+  lexer_advance(parser->lexer);
   return init_ast(AST_NOOP);
 }
 
@@ -210,7 +215,7 @@ AST_T* parser_parse_string(parser_T* parser, scope_T* scope)
 
 AST_T* parser_parse_id(parser_T* parser, scope_T* scope)
 {
-  if (strcmp(parser->current_token->value, "define") == 0) {
+  if (strcmp(parser->current_token->value, "set") == 0) {
     return parser_parse_variable_definition(parser, scope);
   } else if (strcmp(parser->current_token->value, "fn") == 0) {
     return parser_parse_function_definition(parser, scope);
