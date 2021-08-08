@@ -3,6 +3,9 @@
 
  An open source general purpose high-level programming language!
 
+# Vs Code Extention
+Language Support Extention: [Click Here To Download](https://marketplace.visualstudio.com/items?itemName=TechPenguineer.onya-language-support)
+
 # How to install
 ### **Window**
 - Step 1: <br> Install the setup <br><br>

@@ -2,7 +2,9 @@
     "name": "onya-language-support",
     "displayName": "Onya Language Support",
     "description": "VSC Language support for Onya",
+    "publisher": "TechPenguineer",
     "version": "0.0.1",
+    "repository": "https://github.com/TechPenguineer/Onya",
     "engines": {
         "vscode": "^1.59.0"
     },
