@@ -14,7 +14,8 @@ typedef struct TOKEN_STRUCT
         TOKEN_LBRACE,
         TOKEN_COMMA,
         TOKEN_EOF,
-        TOKEN_NOTE
+        TOKEN_NOTE,
+        TOKEN_NEW_LINE,
     } type;
 
     char* value;

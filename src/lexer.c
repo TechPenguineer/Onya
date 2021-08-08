@@ -16,9 +16,16 @@ lexer_T* init_lexer(char* contents)
 
 void lexer_advance(lexer_T* lexer)
 {
-  if (lexer->c != '\0' && lexer->i < strlen(lexer->contents)) {
-    lexer->i += 1;
+  if (lexer->c != '\n'&& lexer->i < strlen(lexer->contents)) {
+    lexer->i = lexer->i+1;
     lexer->c = lexer->contents[lexer->i];
+  }
+}
+void return_if_no_token(lexer_T* lexer)
+{
+    while (lexer->c == NULL)
+    {
+        lexer_advance(lexer);
   }
 }
 void lexer_skip_line(lexer_T* lexar)
@@ -32,13 +39,15 @@ void lexer_skip_whitespace(lexer_T* lexer)
 {
   while (lexer->c == ' ' || lexer->c == 10) {
     lexer_advance(lexer);
+    lexer->i = lexer->i+1;
   }
 }
 
 token_T* lexer_get_next_token(lexer_T* lexer)
 {
-  while (lexer->c != '\0' && lexer->i < strlen(lexer->contents)) {
-    if (lexer->c == ' ' || lexer->c == 10)
+  while (lexer->c != '\0'||lexer->c != '\n' && lexer->i < strlen(lexer->contents)) {
+    
+    if (lexer->c == '\n' || lexer->c == '\0' || lexer->c == 10)
       lexer_skip_whitespace(lexer);
 
     if (isalnum(lexer->c))
@@ -47,6 +56,7 @@ token_T* lexer_get_next_token(lexer_T* lexer)
     if (lexer->c == '"')
       return lexer_collect_string(lexer);
 
+    //printf("Id: %i  Content: %c\n ", lexer->i, lexer->c);
     
     switch (lexer->c) {
       case '=':
@@ -78,11 +88,12 @@ token_T* lexer_get_next_token(lexer_T* lexer)
           lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer)));
         break;
       case '\n':
-          lexer_advance(lexer);
-      break;
+          init_token(TOKEN_NEW_LINE, '\n');
+          return lexer_advance_with_token(TOKEN_NEW_LINE, '\n');
+      break; 
     }
   }
-
+  
   return init_token(TOKEN_EOF, "\n");
 }
 

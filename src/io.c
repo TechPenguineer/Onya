@@ -11,9 +11,7 @@ char* get_file_contents(const char* filepath)
   FILE* f = fopen(filepath, "rb");
 
   if (f) {
-    const char* end = fseek(f, 0, SEEK_END);
-    init_token(TOKEN_EOF, end);
-
+    fseek(f, 0, SEEK_END);
     length = ftell(f);
     fseek(f, 0, SEEK_SET);
     

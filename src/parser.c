@@ -66,7 +66,7 @@ AST_T* parser_parse_statements(parser_T* parser, scope_T* scope)
         realloc(compound->compound_value, compound->compound_size * sizeof(struct AST_STRUCT*));
       compound->compound_value[compound->compound_size - 1] = ast_statement;
       lexer_advance(parser->lexer);
-      printf("%c", compound->compound_value);
+      //printf("%c", compound->compound_value);
 
     }
 
