@@ -4,11 +4,10 @@ Onya language support is auto completion for .onya type files
 
 ## Known Issues
 
-Syntax highlighting not working
+Not all syntax highlighting added
 
 ## Release Notes
 
-Inital release for simple autocomplete
-
+Added more syntax highlighting for variables, functions, methods, and comments
 
 

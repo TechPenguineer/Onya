@@ -3,7 +3,7 @@
     "displayName": "Onya Language Support",
     "description": "VSC Language support for Onya",
     "publisher": "TechPenguineer",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "repository": "https://github.com/TechPenguineer/Onya",
     "engines": {
         "vscode": "^1.59.0"
