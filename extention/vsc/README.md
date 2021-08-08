@@ -8,6 +8,6 @@ Not all syntax highlighting added
 
 ## Release Notes
 
-Added more syntax highlighting for variables, functions, methods, and comments
+Added more syntax highlighting for variables, functions, methods, and comments. Added bew highlighting for math functions.
 
 

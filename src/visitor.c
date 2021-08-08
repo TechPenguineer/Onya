@@ -56,14 +56,14 @@ static AST_T* builtun_function_math_differece(visitor_T* visitor, AST_T** args, 
 
     AST_T* value_one = visitor_visit(visitor, args[0]);
     AST_T* value_two = visitor_visit(visitor, args[1]);
+    long sum;
 
     switch (value_one->type,value_two->type)
     {
-        int sum;
-        sum = value_one - value_two;
     case AST_NOOP:
+        sum = value_one->int_value - value_two->int_value;
         printf("The difference in %i", sum);
-        return sum;
+        return (void *)sum;
     break;
     }
     return init_ast(AST_NOOP);
