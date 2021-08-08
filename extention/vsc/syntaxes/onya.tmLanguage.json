@@ -7,14 +7,64 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#reserved-words"
+		},
+		{
+			"include": "#expressions"
+		},
+		{
+			"include": "#function"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#var-value"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"numbers": {
 			"patterns": [{
-				"name": "keyword.control.onya",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+				"name": "keyword.other.unit.suffix.integer.onya",
+				"match": "(^-?[0-9][0-9\\.]+$)"
+			}
+		]
+		},
+		"reserved-words": {
+			"match": "\\b(print|println|fread)\\b",
+			"name": "entity.name.function.member.onya"
+		},
+		"variables": {
+			"match": "\\b(var|int|str)\\b",
+			"name": "variable.name"
+		},
+		"expressions":
+		{
+			"patterns": [
+				{"include": "#reserved-words"},
+				{"include": "#numbers"},
+				{"include": "#strings"},
+				{"include": "#variables"}
+			]
+
+		},
+		"function":{
+			"name":"constant.regexp",
+			"match": "\\b(fn|func)\\b"
+		},
+		"comment": 
+		{
+			"name":"comment.line",
+			"begin": "#",
+			"end": "\n"
+		},
+		"var-value":
+		{
+			"begin": "var",
+			"end": "=",
+			"name":"invalid.deprecated"
 		},
 		"strings": {
 			"name": "string.quoted.double.onya",

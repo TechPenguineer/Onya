@@ -4,7 +4,8 @@
 
 extention/vsc/node_modules
 # VS
-.vs/
+.vs
+.vscode-test
 
 ### C ###
 # Prerequisites
