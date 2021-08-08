@@ -41,9 +41,6 @@ typedef struct AST_STRUCT
     /* AST_STRING */
     char* string_value;
 
-    /* AST_INT */
-    int* int_value;
-
     /* AST_COMPOUND */
     struct AST_STRUCT** compound_value;
     size_t compound_size;
