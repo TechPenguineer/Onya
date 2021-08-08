@@ -41,6 +41,21 @@ static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int arg
   return init_ast(AST_NOOP);
 }
 
+static AST_T* builtin_function_print_memad(visitor_T* visitor, AST_T** args, int args_size)
+{
+  int i;
+  for (i = 0; i < args_size; i++) {
+    AST_T* visited_ast = visitor_visit(visitor, args[i]);
+
+    switch (visited_ast->type) {
+      case AST_STRING: printf("\n%s", &visited_ast->string_value); break;
+      default: printf("%p ", &visited_ast); break;
+    }
+  }
+
+  return init_ast(AST_NOOP);
+}
+
 /*
   __  __       _______ _    _ 
  |  \/  |   /\|__   __| |  | |
@@ -50,25 +65,6 @@ static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int arg
  |_|  |_/_/    \_\_|  |_|  |_|    
 
 */
-
-static AST_T* builtun_function_math_differece(visitor_T* visitor, AST_T** args, int arg_size)
-{
-
-    AST_T* value_one = visitor_visit(visitor, args[0]);
-    AST_T* value_two = visitor_visit(visitor, args[1]);
-    long sum;
-
-    switch (value_one->type,value_two->type)
-    {
-    case AST_NOOP:
-        sum = value_one->int_value - value_two->int_value;
-        printf("The difference in %i", sum);
-        return (void *)sum;
-    break;
-    }
-    return init_ast(AST_NOOP);
-}
-
 
 
 
@@ -173,16 +169,13 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
       visitor, node->function_call_arguments, node->function_call_arguments_size);
   }
 
-  // MATH
-
-  if (strcmp(node->function_call_name, "difference") == 0 ||
-      strcmp(node->function_call_name, "diff") == 0) {
-   
-      return builtun_function_math_differece(
-          visitor, node->function_call_arguments, node->function_call_arguments_size
-      );
+    else if (strcmp(node->function_call_name, "printMemad") == 0)
+  {
+    return builtin_function_print_memad(
+      visitor, node->function_call_arguments, node->function_call_arguments_size);
   }
 
+  // MATH
 
 
 

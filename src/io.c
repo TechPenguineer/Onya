@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "include/lexer.h"
+
+
 char* get_file_contents(const char* filepath)
 {
   char* buffer = 0;
