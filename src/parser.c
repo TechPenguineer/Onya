@@ -213,6 +213,17 @@ AST_T* parser_parse_string(parser_T* parser, scope_T* scope)
   return ast_string;
 }
 
+AST_T* parser_parse_int(parser_T* parser, scope_T* scope)
+{
+    AST_T* ast_int = init_ast(AST_STRING);
+    ast_int->int_value = parser->current_token->value;
+
+    ast_int->scope = scope;
+
+    return ast_int;
+}
+
+
 AST_T* parser_parse_id(parser_T* parser, scope_T* scope)
 {
   if (strcmp(parser->current_token->value, "set") == 0) {

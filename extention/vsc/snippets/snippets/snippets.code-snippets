@@ -1,0 +1,8 @@
+{
+    "onya.println.snippet":
+    {
+        "scope": "onya",
+        "prefix": "ops",
+        "body": "println(\"$0\")"
+    }
+}

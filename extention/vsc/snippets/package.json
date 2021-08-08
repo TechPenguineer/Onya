@@ -1,0 +1,21 @@
+{
+    "name": "onya-snippets",
+    "displayName": "Onya Snippets",
+    "description": "Quick code snippets for the Onya Language",
+    "version": "0.0.1",
+    "publisher": "techpenguineer",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": ".onya",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}

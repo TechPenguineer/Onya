@@ -25,6 +25,20 @@ static AST_T* builtin_function_print(visitor_T* visitor, AST_T** args, int args_
   return init_ast(AST_NOOP);
 }
 
+static AST_T* builtin_function_merge(visitor_T* visitor, AST_T** args, int args_size)
+{
+    int i;
+    for (i = 0; i < args_size; i++) {
+        AST_T* visited_ast = visitor_visit(visitor, args[i]);
+
+        switch (visited_ast->type) {
+        case AST_STRING: printf("%s", visited_ast->string_value); break; default: printf("%p ", visited_ast); break;
+        }
+    }
+
+    return init_ast(AST_NOOP);
+}
+
 // PRINT LN
 static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int args_size)
 {
@@ -60,7 +74,7 @@ static AST_T* builtun_function_math_differece(visitor_T* visitor, AST_T** args, 
 
     switch (value_one->type,value_two->type)
     {
-    case AST_NOOP:
+    case AST_INT:
         sum = value_one->int_value - value_two->int_value;
         printf("The difference in %i", sum);
         return (void *)sum;
@@ -123,6 +137,7 @@ AST_T* visitor_visit(visitor_T* visitor, AST_T* node)
     case AST_VARIABLE: return visitor_visit_variable(visitor, node); break;
     case AST_FUNCTION_CALL: return visitor_visit_function_call(visitor, node); break;
     case AST_STRING: return visitor_visit_string(visitor, node); break;
+    case AST_INT: return visitor_visit_string(visitor, node); break;
     case AST_COMPOUND: return visitor_visit_compound(visitor, node); break;
     case AST_NOOP: return node; break;
   }
@@ -175,9 +190,8 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
 
   // MATH
 
-  if (strcmp(node->function_call_name, "difference") == 0 ||
-      strcmp(node->function_call_name, "diff") == 0) {
-   
+   if (strcmp(node->function_call_name, "diff") == 0){
+        printf("Difference function called");
       return builtun_function_math_differece(
           visitor, node->function_call_arguments, node->function_call_arguments_size
       );
@@ -237,7 +251,10 @@ AST_T* visitor_visit_string(visitor_T* visitor, AST_T* node)
 {
   return node;
 }
-
+AST_T* visitor_visit_int(visitor_T* visitor, AST_T* node)
+{
+    return node;
+}
 AST_T* visitor_visit_compound(visitor_T* visitor, AST_T* node)
 {
   int i;
