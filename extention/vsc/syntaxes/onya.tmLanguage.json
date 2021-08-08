@@ -34,11 +34,11 @@
 		},
 		"reserved-words": {
 			"match": "\\b(print|println|fread)\\b",
-			"name": "entity.name.function.member.onya"
+			"name": "entity.name.tag"
 		},
 		"variables": {
 			"match": "\\b(var|int|str)\\b",
-			"name": "variable.name"
+			"name": "entity.name.class"
 		},
 		"expressions":
 		{
@@ -51,7 +51,7 @@
 
 		},
 		"function":{
-			"name":"constant.regexp",
+			"name":"support.function",
 			"match": "\\b(fn|func)\\b"
 		},
 		"comment": 
@@ -63,9 +63,8 @@
 		"var-value":
 		{
 			"begin": "var",
-			"end": "=",
-			"name":"invalid.deprecated"
-		},
+			"end": " "
+				},
 		"strings": {
 			"name": "string.quoted.double.onya",
 			"begin": "\"",

@@ -2,7 +2,15 @@
 #include "include/scope.h"
 #include <stdio.h>
 #include <string.h>
-
+/*
+  _____  _____  _____ _   _ _______ 
+ |  __ \|  __ \|_   _| \ | |__   __|
+ | |__) | |__) | | | |  \| |  | |   
+ |  ___/|  _  /  | | | . ` |  | |   
+ | |    | | \ \ _| |_| |\  |  | |   
+ |_|    |_|  \_|_____|_| \_|  |_|   
+                                    
+*/
 static AST_T* builtin_function_print(visitor_T* visitor, AST_T** args, int args_size)
 {
   int i;
@@ -16,6 +24,8 @@ static AST_T* builtin_function_print(visitor_T* visitor, AST_T** args, int args_
 
   return init_ast(AST_NOOP);
 }
+
+// PRINT LN
 static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int args_size)
 {
   int i;
@@ -30,6 +40,9 @@ static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int arg
 
   return init_ast(AST_NOOP);
 }
+
+/*
+*/
 
 static AST_T* builtin_function_exit(visitor_T* visitor, AST_T** args, int args_size)
 {

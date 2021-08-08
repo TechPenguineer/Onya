@@ -1,7 +1,8 @@
 #include "include/io.h"
+#include "include/token.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "include/lexer.h"
 char* get_file_contents(const char* filepath)
 {
   char* buffer = 0;
@@ -10,7 +11,9 @@ char* get_file_contents(const char* filepath)
   FILE* f = fopen(filepath, "rb");
 
   if (f) {
-    fseek(f, 0, SEEK_END);
+    const char* end = fseek(f, 0, SEEK_END);
+    init_token(TOKEN_EOF, end);
+
     length = ftell(f);
     fseek(f, 0, SEEK_SET);
     
