@@ -1,0 +1,25 @@
+{
+    "name": "onya-language-support",
+    "displayName": "Onya Language Support",
+    "description": "VSC Language support for Onya",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "onya",
+            "aliases": ["Onya", "onya"],
+            "extensions": [".onya"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "onya",
+            "scopeName": "source.onya",
+            "path": "./syntaxes/onya.tmLanguage.json"
+        }]
+    }
+}
