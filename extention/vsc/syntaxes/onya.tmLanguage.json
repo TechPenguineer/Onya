@@ -22,6 +22,9 @@
 		},
 		{
 			"include": "#var-value"
+		},
+		{
+			"include": "#math"
 		}
 	],
 	"repository": {
@@ -34,11 +37,15 @@
 		},
 		"reserved-words": {
 			"match": "\\b(print|println|fread)\\b",
-			"name": "entity.name.tag"
+			"name": "support.function"
 		},
 		"variables": {
 			"match": "\\b(var|int|str)\\b",
-			"name": "entity.name.class"
+			"name": "variable.language"
+		},
+		"math": {
+			"match": "\\b(diff|difference)\\b",
+			"name":"support.function"
 		},
 		"expressions":
 		{

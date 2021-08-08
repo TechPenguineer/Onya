@@ -54,7 +54,8 @@ static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int arg
 static AST_T* builtun_function_math_differece(visitor_T* visitor, AST_T** args, int arg_size)
 {
 
-
+    AST_T* value_one = visitor_visit(visitor, args[0]);
+    AST_T* value_two = visitor_visit(visitor, args[1]);
 
     switch (value_one->type,value_two->type)
     {
@@ -76,6 +77,9 @@ static AST_T* builtun_function_math_differece(visitor_T* visitor, AST_T** args, 
 
 static AST_T* builtin_function_exit(visitor_T* visitor, AST_T** args, int args_size)
 {
+  int i;
+  for (i = 0; i < args_size; i++) {
+    AST_T* visited_ast = visitor_visit(visitor, args[i]);
 
     switch (visited_ast->type) {
       case AST_NOOP:
