@@ -28,13 +28,6 @@ void return_if_no_token(lexer_T* lexer)
         lexer_advance(lexer);
   }
 }
-void lexer_skip_line(lexer_T* lexar)
-{
-    while (lexar->c == '\n')
-    {
-        lexer_advance(lexer_advance);
-    }
-}
 void lexer_skip_whitespace(lexer_T* lexer)
 {
   while (lexer->c == ' ' || lexer->c == 10) {
@@ -87,12 +80,9 @@ token_T* lexer_get_next_token(lexer_T* lexer)
         return lexer_advance_with_token(
           lexer, init_token(TOKEN_COMMA, lexer_get_current_char_as_string(lexer)));
         break;
-      case "#":
+      case '#':
           return lexer_advance_with_token(lexer, init_token(TOKEN_NOTE, lexer_get_current_char_as_string(lexer)));
-      case '\n':
-          init_token(TOKEN_NEW_LINE, '\n');
-          return lexer_advance_with_token(TOKEN_NEW_LINE, '\n');
-      break; 
+      break;
     }
   }
   
