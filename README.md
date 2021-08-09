@@ -2,6 +2,9 @@
 <hr>
 
  An open source general purpose high-level programming language!
+ 
+ [**OO-N-YUH**] <br>
+ **This language is gonna onya other languages**
 
 # Vs Code Extention
 Language Support Extention: [Click Here To Download](https://marketplace.visualstudio.com/items?itemName=TechPenguineer.onya-language-support)
