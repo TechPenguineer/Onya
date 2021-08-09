@@ -1,5 +1,6 @@
 #include "include/visitor.h"
 #include "include/scope.h"
+#include "include/io.h"
 #include <stdio.h>
 #include <string.h>
 /*
@@ -56,17 +57,37 @@ static AST_T* builtin_function_print_memad(visitor_T* visitor, AST_T** args, int
   return init_ast(AST_NOOP);
 }
 
-/*
-  __  __       _______ _    _ 
- |  \/  |   /\|__   __| |  | |
- | \  / |  /  \  | |  | |__| |
- | |\/| | / /\ \ | |  |  __  |
- | |  | |/ ____ \| |  | |  | |
- |_|  |_/_/    \_\_|  |_|  |_|    
+/*  
+
+  ______ _____ _      ______           _______     _______ _______ ______ __  __
+ |  ____|_   _| |    |  ____|         / ____\ \   / / ____|__   __|  ____|  \/  |
+ | |__    | | | |    | |__           | (___  \ \_/ / (___    | |  | |__  | \  / |
+ |  __|   | | | |    |  __|           \___ \  \   / \___ \   | |  |  __| | |\/| |
+ | |     _| |_| |____| |____          ____) |  | |  ____) |  | |  | |____| |  | |
+ |_|    |_____|______|______|        |_____/   |_| |_____/   |_|  |______|_|  |_|
 
 */
 
+static AST_T* builtin_function_readf(visitor_T* visitor, AST_T** args, int args_size)
+{
+    if (args_size == 1)
+    {
+        AST_T* file_path = visitor_visit(visitor, args[0]);
 
+        switch (file_path->type)
+        {
+        case AST_STRING: 
+            get_file_contents(file_path);
+        
+        break;
+    }
+    }
+    else
+    {
+        printf("Error: Only one argument is expected");
+    }
+    return init_ast(AST_NOOP);
+}
 
 
 
@@ -174,7 +195,11 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
     return builtin_function_print_memad(
       visitor, node->function_call_arguments, node->function_call_arguments_size);
   }
-
+    else if (strcmp(node->function_call_name, "readf") == 0)
+  {
+      return builtin_function_readf(
+          visitor, node->function_call_arguments, node->function_call_arguments_size);
+  }
   // MATH
 
 
