@@ -1,1 +1,4 @@
-# printMemad("Hi");
+# This is a comment!
+println("Hello World!");
+
+fn Twin()

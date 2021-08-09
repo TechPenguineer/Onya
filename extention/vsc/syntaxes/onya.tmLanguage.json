@@ -25,6 +25,9 @@
 		},
 		{
 			"include": "#math"
+		},
+		{
+			"include": "#fn-name"
 		}
 	],
 	"repository": {
@@ -58,7 +61,7 @@
 
 		},
 		"function":{
-			"name":"support.function",
+			"name":"entity.name.class",
 			"match": "\\b(fn|func)\\b"
 		},
 		"comment": 
@@ -71,7 +74,13 @@
 		{
 			"begin": "var",
 			"end": " "
-				},
+		},
+		"fn-name":
+		{
+			"begin": "fn",
+			"end": "(",
+			"name": "invalid.deprecated"
+		},
 		"strings": {
 			"name": "string.quoted.double.onya",
 			"begin": "\"",
