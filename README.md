@@ -7,7 +7,7 @@
 Language Support Extention: [Click Here To Download](https://marketplace.visualstudio.com/items?itemName=TechPenguineer.onya-language-support)
 
 # How to install
-### **Window**
+### **Window** (Automatic enviroment variables coming soon)
 - Step 1: <br> Install the setup <br><br>
 - Step 2: <br> Press the windows key and search for "Edit the System and Enviroment Variables"<br><br>
 - Step 3: <br> Press `Enviroment Variables` <br><br>
@@ -16,6 +16,10 @@ Language Support Extention: [Click Here To Download](https://marketplace.visuals
 - Step 6:<br>Then type in this: <br> `C:\Program Files  >x86>\Onya<br><br>
 - Step 7: <br> Test it to see if it works by going into a command prompt and typing `onya help`
 
+# Unix type os's (Including linux)
+- Step 1: <br> Clone the repository <br>
+- Step 2: Go to `platforms/linux` and run `install.sh`
+  > This will automaticaly add a enviroment variable for the CLI
 
 # How to run
 After installing all you have to do is type `onya help` you will get a prompt giving you instructions
