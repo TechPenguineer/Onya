@@ -47,7 +47,8 @@ char* get_file_contents(const char* filepath)
             WAITING FOR ARGS - 4
 
         */
-        for (int i = 0; i < strlen(buffer); i++) {
+       int i;
+        for ( i = 0; i < strlen(buffer); i++) {
             if (parserState == 2) {
 
             }
