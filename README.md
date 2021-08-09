@@ -2,6 +2,9 @@
 <hr>
 
  An open source general purpose high-level programming language!
+ 
+ [**OO-N-YUH**] <br>
+ **This language is gonna onya other languages**
 
 # Vs Code Extention
 Language Support Extention: [Click Here To Download](https://marketplace.visualstudio.com/items?itemName=TechPenguineer.onya-language-support)
@@ -112,6 +115,13 @@ DoSomething <"John">;
 <a href="https://github.com/TechPenguineer/Onya/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=TechPenguineer/Onya" />
 </a>
+
+
+
+
+# Birthday 🎂
+
+Onya was born 8/6/2021 at 6:19 am 
 
 
 
