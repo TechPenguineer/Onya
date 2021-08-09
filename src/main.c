@@ -5,6 +5,7 @@
 #include "include/visitor.h"
 #include <stdio.h>
 #include <string.h>
+#include <wchar.h>
 
 #define MAX_LIMIT 20
 void print_help()
@@ -62,10 +63,16 @@ unsigned int has_ext(const char* filename, const char* ext)
   return c;
 }
 
+ void* addENV()
+{
+    _putenv("Path=;%%PROGRAMFILES%%\\Onya;");
+    char * x = getenv("PATH");
+    printf("ADDED ENV VARS");
+    printf("%s", x);
+}
+
 int main(int argc, char* argv[])
 {
-  _putenv("Path=C:\\Program Files\\Onya");
-  _putenv("PathEXT=;.onya");
 
   if (argc >= 2) {
     int i;
@@ -76,16 +83,19 @@ int main(int argc, char* argv[])
         AST_T* root = parser_parse(parser, parser->scope);
         visitor_T* visitor = init_visitor();
         visitor_visit(visitor, root);
+       // addENV();
       }
 
       else {
         print_help();
+       
       }
 
     }
   } else {
     char input[MAX_LIMIT];
     while (1) {
+     // addENV();
       printf("Onya: Version 0.0.1 \n => ");
       fgets(input, MAX_LIMIT, stdin);
       lexer_T* lexer = init_lexer(input);
