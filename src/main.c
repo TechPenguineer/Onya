@@ -10,7 +10,13 @@
 #define MAX_LIMIT 20
 void print_help()
 {
-  printf("Usage:\nhello.out <filename>\n");
+  printf("\n----------- EXECUTING -----------\n");
+  printf("Running: nonya <filename.onya\n\n");
+  
+  printf("\n----------- Developers -----------\n");
+  printf("Penguin Technology");
+
+
   exit(1);
 }
 
@@ -86,23 +92,11 @@ int main(int argc, char* argv[])
        // addENV();
       }
 
-      else {
+      else{
         print_help();
        
       }
 
-    }
-  } else {
-    char input[MAX_LIMIT];
-    while (1) {
-     // addENV();
-      printf("Onya: Version 0.0.1 \n => ");
-      fgets(input, MAX_LIMIT, stdin);
-      lexer_T* lexer = init_lexer(input);
-      parser_T* parser = init_parser(lexer);
-      AST_T* root = parser_parse(parser, parser->scope);
-      visitor_T* visitor = init_visitor();
-      visitor_visit(visitor, root);
     }
   }
   return 0;
