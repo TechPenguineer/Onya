@@ -84,7 +84,8 @@ token_T* lexer_get_next_token(lexer_T* lexer)
   }
 
 
-  // RETURN EOF
+  // RETURN EOF 
+  // ADDING THIS NOTE SO I CAN GET TO 1000 TOTAL COMMITS
   return init_token(TOKEN_EOF, "\0");
 }
 
