@@ -1,8 +1,1 @@
-# This is a comment!
-println("Hello World!");
-
-fn Twin()
-{
-    println("Hello!");
-}
-Twin();
+var x = "EE"; print(x);

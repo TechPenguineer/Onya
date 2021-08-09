@@ -17,7 +17,7 @@ char* get_file_contents(const char* filepath)
     FILE* f = fopen(filepath, "rb");
 
     if (f) {
-        //printf("IO\n");
+        printf("IO\n");
         fseek(f, 0, SEEK_END);
         length = ftell(f);
         fseek(f, 0, SEEK_SET);
@@ -26,7 +26,7 @@ char* get_file_contents(const char* filepath)
 
         if (buffer) {
             fread(buffer, sizeof(char), length, f);
-            //printf("File content is:\n%s \n", buffer);
+            printf("File content is:\n%s \n", buffer);
         }
 
         fclose(f);
@@ -34,7 +34,7 @@ char* get_file_contents(const char* filepath)
         /*
         * Handler: AKA Parser
         */
-        //printf("\n\nHANDLER\n");
+        printf("\n\nHANDLER\n");
         int parserState = 1;
         int scopeState = 2; //What else to do?
         char* token = calloc(100, sizeof(char));  //For now, 100 is a good number for testing
@@ -59,13 +59,13 @@ char* get_file_contents(const char* filepath)
                 else if (buffer[i] == '\n') {
                     if (parserState == 0) {
                         parserState = 1;
-                        //printf("Comment skipped \n");
+                        printf("Comment skipped \n");
                     }
 
                 }
                 else if (parserState == 1) {
                     if (buffer[i] == ';') {
-                        //printf("Token is: %s \n", token);
+                        printf("Token is: %s \n", token);
                         digest_token(token);
                         free(token);
                         token = calloc(100, sizeof(char));
@@ -77,12 +77,12 @@ char* get_file_contents(const char* filepath)
                     }
                 }
                 else if (parserState > 0) {
-                   // printf("Char #%d: %c, ASCII: %d \n", i, buffer[i], buffer[i]);
+                    printf("Char #%d: %c, ASCII: %d \n", i, buffer[i], buffer[i]);
                 }
             }
         }
-       // printf("Test End!\n");
-
+        printf("Test End!\n");
+        exit(2);
         return buffer;
     }
     printf("Error reading file %s", filepath);
