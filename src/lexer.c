@@ -82,7 +82,9 @@ token_T* lexer_get_next_token(lexer_T* lexer)
         break;
     }
   }
-  
+
+
+  // RETURN EOF
   return init_token(TOKEN_EOF, "\0");
 }
 
