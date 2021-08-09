@@ -42,20 +42,6 @@ static AST_T* builtin_function_println(visitor_T* visitor, AST_T** args, int arg
   return init_ast(AST_NOOP);
 }
 
-static AST_T* builtin_function_print_memad(visitor_T* visitor, AST_T** args, int args_size)
-{
-  int i;
-  for (i = 0; i < args_size; i++) {
-    AST_T* visited_ast = visitor_visit(visitor, args[i]);
-
-    switch (visited_ast->type) {
-      case AST_STRING: printf("\n%s", &visited_ast->string_value); break;
-      default: printf("%p ", &visited_ast); break;
-    }
-  }
-
-  return init_ast(AST_NOOP);
-}
 
 /*  
 
@@ -68,26 +54,6 @@ static AST_T* builtin_function_print_memad(visitor_T* visitor, AST_T** args, int
 
 */
 
-static AST_T* builtin_function_readf(visitor_T* visitor, AST_T** args, int args_size)
-{
-    if (args_size == 1)
-    {
-        AST_T* file_path = visitor_visit(visitor, args[0]);
-
-        switch (file_path->type)
-        {
-        case AST_STRING: 
-            get_file_contents(file_path);
-        
-        break;
-    }
-    }
-    else
-    {
-        printf("Error: Only one argument is expected");
-    }
-    return init_ast(AST_NOOP);
-}
 
 
 
@@ -190,16 +156,6 @@ AST_T* visitor_visit_function_call(visitor_T* visitor, AST_T* node)
       visitor, node->function_call_arguments, node->function_call_arguments_size);
   }
 
-    else if (strcmp(node->function_call_name, "printMemad") == 0)
-  {
-    return builtin_function_print_memad(
-      visitor, node->function_call_arguments, node->function_call_arguments_size);
-  }
-    else if (strcmp(node->function_call_name, "readf") == 0)
-  {
-      return builtin_function_readf(
-          visitor, node->function_call_arguments, node->function_call_arguments_size);
-  }
   // MATH
 
 
